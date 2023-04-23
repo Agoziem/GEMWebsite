@@ -55,10 +55,10 @@ class Staff(models.Model):
 	Profileimage=models.ImageField( upload_to="assets/Profile", blank=False)
 	Name=models.CharField(max_length=300,blank=False)
 	Responsibility=models.CharField(max_length=300,blank=False)
-	facebook=models.CharField(max_length=300,blank=False)
-	whatsapp=models.CharField(max_length=300,blank=False)
-	instagram=models.CharField(max_length=300,blank=False)
-	twitter=models.CharField(max_length=300,blank=False)
+	facebook=models.CharField(max_length=300,blank=True)
+	whatsapp=models.CharField(max_length=300,blank=True)
+	instagram=models.CharField(max_length=300,blank=True)
+	twitter=models.CharField(max_length=300,blank=True)
     
 	def __str__(self):
 		return str(self.Name)
@@ -82,7 +82,7 @@ class Event(models.Model):
 	Zoom_meeting=models.BooleanField(default=True, blank=False)
 	Zoom_ID=models.CharField(max_length=300,blank=False)
 	Zoom_Password=models.CharField(max_length=300,blank=False)
-	Other_Venue=models.CharField(max_length=300,blank=False)
+	Other_Venue=models.CharField(max_length=300,blank=True)
     
 	def __str__(self):
 		return str(self.Title)

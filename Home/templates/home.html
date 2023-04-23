@@ -1,9 +1,64 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block title %}Home{% endblock %}
-
 {% block content %}
-    <h1>About Us</h1>
-    <p>We are a small company based in Django City, specializing in web development and design.</p>
+<img class="Rectangle" src="{% static 'images/Bent Rectangle.png' %}" alt="">
+    <section class="hero_section px-5" style="height:100vh;"> 
+        <img class="Ellipse" src="{% static 'images/Ellipse.png' %}" alt="">
+        <div class="row justify-content-evenly align-items-center mt-5 mb-2">
+            <div class="col-lg d-flex justify-content-center">
+                <div class="hero_text_container">
+                    <div class="hero_text">
+                        <span class="text1">GET</span><br>
+                        <span class="text2">EQUIPPED</span><br>
+                        <span class="text3">MISSION <div class="small_rectangle1"></div><div class="small_rectangle2"></div></span><br>
+                    </div>
+                    <p class="text4 p-0"  style="font-size: 29px;">Equiping People , transforming the World</p>
+                    <a href="#Contact" class="btn btn-primary"> Contact us</a>  
+                </div>         
+            </div>
+            <div class="col-lg hero_image_container d-flex justify-content-center">
+                <img class="hero_image" src="{% static 'images/Hero Image.png' %}" alt="" style="width:100%;max-width: 500px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="About px-5 mb-5">
+        <img class="Shield" src="{% static 'images/Shield 1.svg' %}" alt="">
+        <div class="About_container d-flex justify-content-center align-items-center flex-column">
+            <div class="rule"></div>
+            <h1 class="my-2">Welcome to GEM</h1>
+            <p class="text-center" style="width: 333px;">
+                Here, anything is possible; 
+                Dreams come true and you can 
+                live a life better than you ever imagined.
+                You can live the Kingdom-life!
+            </p>
+            <div class="row justify-content-evenly align-items-center g-5 my-2">
+                <div class="col-md">
+                    <div class="about-card">
+                        <img src="{% static 'images/Vision.svg' %}" alt="">
+                        <div class="about_heading">Vision</div>
+                        <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on earth like it is in heaven.</div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="about-card">
+                        <img src="{% static 'images/Mission.svg' %}" alt="">
+                        <div class="about_heading">Mission</div>
+                        <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on earth like it is in heaven.</div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="about-card">
+                        <img src="{% static 'images/GEM 2.svg' %}" alt="">
+                        <div class="about_heading">About</div>
+                        <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on earth like it is in heaven.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
+

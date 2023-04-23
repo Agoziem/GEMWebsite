@@ -11,7 +11,7 @@ import json
 
 
 def home_view(request):
-	# queryset1=School.objects.all()
+	queryset1=Organization_detail.objects.get(id=1)
 	# queryset2=Management.objects.all()
 	# queryset3=Header.objects.all()
 	# queryset4=FAQ.objects.all()
@@ -22,7 +22,7 @@ def home_view(request):
 	# queryset9=Article.objects.order_by('-id')[:4]
 	context= {
 	# 'mapbox_private_key':settings.MAPBOXGL_ACCESSTOKEN,
-	# 'schools':queryset1,
+	'GEM':queryset1,
 	# 'managements':queryset2,
 	# 'headers':queryset3,
 	# 'FAQ':queryset4,

@@ -1,27 +1,253 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/St Marks Logo.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/St Marks Logo.png' %}">
+        <link rel="icon" type="image/png" sizes="48x48" href="{% static 'images/St Marks Logo.png' %}"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>{% block title %}My Website{% endblock %}</title>
     {% block extra_head %}{% endblock %}
+    <script>
+        var user = '{{request.user}}'
+
+        function getToken(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken')
+    </script>
 </head>
-<body>
-    <nav>
+
+<body class="position-relative d-flex flex-column min-vh-100">
+
+    <!-- Navbar for Large -->
+
+    <nav class="navbar navbar-expand-lg mt-0 fixed-top" id="navigation">
+        <div class=" container px-2 d-flex justify-content-between">
+            <!-- First Part of the Nav bar -->
+
+            <div class="d-flex justify-content-between">
+                <a href="{% url 'home' %}"><img src="{% static 'images/GEM Logo.png' %}" alt="..."
+                        class="brand_image img-fluid"></a>
+            </div>
+            <div class="d-flex d-md-none align-items-center justify-content-center">
+                <div class="nav-item-envelope me-3 position-relative">
+                    <a class="nav-link pt-3">
+                        <i class="fas fa-envelope h2 " style="color:#3b0505;"></i>
+                        <!-- <span class="position-absolute top-1 start-95 translate-middle badge rounded-pill bg-danger">
+              3
+            </span> -->
+                    </a>
+                    <!-- <ul class="dropdown-menu shadow-sm" style="width: 89vw; max-width:369px;">
+            <li class="ps-4 py-2">Notification Center</li>
+            <li>Message 1 Message Message Message Message Message Message Message Message Message</li>
+            <li>Message 2</li>
+            <li>Message 3</li>
+            <li>Message 3</li>
+            <li>Message 3</li>
+            <li>Message 3</li>
+          </ul> -->
+                </div>
+                <div class="hamburger-menu ">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+
+            <!-- Second Part of the Nav bar -->
+            <div class="d-none d-lg-flex collapse navbar-collapse" id="navmenu">
+                <ol class="navbar-nav ms-auto text-start ps-1">
+                    <li class="nav-item me-2">
+                        <a href="{% url 'home' %}" class="nav-link active">Home </a>
+
+                    </li>
+
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link">about</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link">Arms</a>
+                    </li>
+
+                    <li class="nav-item me-2">
+                        <a class="nav-link">projects</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link">Articles & News</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    {% if not user.is_authenticated %}
+                    <li class="nav-item me-2">
+                        <a class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link btn btn-primary" style="color: white;">Signup</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link btn btn-secondary">Log out</a>
+                    </li>
+                    {% endif %}
+                </ol>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar for Small Screen -->
+    <nav class="menu d-none d-md-none">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="#" class="menulink">Home</a></li>
+            <li><a href="#" class="menulink">about</a></li>
+            <li><a href="#" class="menulink">Arms</a></li>
+            <li><a href="#" class="menulink">Projects</a></li>
+            <li><a href="#" class="menulink">Articles & News</a></li>
+            <li><a href="#" class="menulink">Gallery</a></li>
+            <li><a href="#" class="menulink">Contact</a></li>
+            {% if request.user.is_staff %}
+            <li><a href="/admin" class="menulink">Admin</a></li>
+            {% endif %}
         </ul>
     </nav>
-    
-    <main>
-        {% block content %}{% endblock %}
-    </main>
 
-    <footer>      
+    <!-- end of Navigation -->
+    <main>
+        {% block content%}
+        {% endblock %}
+    </main>
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer_link row justify-content-between pb-4 px-5">
+            <div class="col-10 col-sm-8 col-md-4 pe-1 pe-sm-4 pe-md-5">
+                <div id="sub_form_alert_success" class="alert alert-success" style="display: none;">
+                    <i class="bi bi-check-circle-fill mx-2 text-success h5"></i>
+                    <div>
+                        Your email has been sent successfully!
+                    </div>
+                </div>
+
+                <div id="sub_form_alert_danger" class="alert alert-danger" style="display:none;">
+                    <i class="fa-solid fa-triangle-exclamation mx-2 text-danger h5"></i>
+                    <div>
+                        An error occurred while sending your message.
+                    </div>
+                </div>
+                <form id="sub_form">
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="email" class="form-control" placeholder="Email address"
+                            name="email" required>
+                        <button class="btn btn-primary" value="submit" type="submit">Subscribe</button>
+                    </div>
+                </form>
+                <ul class="list-unstyled d-flex mt-3">
+                    <li><a class="link-dark" href="#"><i class="fa-brands fa-facebook" style="font-size: 22px;"></i></a>
+                    </li>
+                    <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-instagram"
+                                style="font-size: 22px;"></i></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-whatsapp"
+                                style="font-size: 22px;"></i></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-twitter"
+                                style="font-size: 22px;"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-3 col-md-2 py-3 pt-md-0">
+                <h5>Quick links</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="{% url 'home' %}" class="nav-link p-0">Home</a></li>
+                    <li class="nav-item mb-2"><a href="/#About" class="nav-link p-0">about</a></li>
+                    <li class="nav-item mb-2"><a href="/#Projects" class="nav-link p-0">Projects</a></li>
+                    <li class="nav-item mb-2"><a href="/#Articles" class="nav-link p-0">Articles & News</a></li>
+                    <li class="nav-item mb-2"><a href="/#Gallery" class="nav-link p-0">Gallery</a></li>
+                    <li class="nav-item mb-2"><a href="/#Contact" class="nav-link p-0">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-5 col-md-2 py-3 pt-md-0">
+                <h5>Articles</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Health</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Politics</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Science</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Arts</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Literature</a></li>
+                </ul>
+            </div>
+
+            <div class="col-5 col-md-2">
+                <h5>GEM ARMS</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Center</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Kingdom</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Men's Hub</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Women's Hub</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Kid's Hub</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Foundation</a></li>
+        
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="sub_footer d-flex justify-content-center align-items-center py-4">
+            <div>
+                <p class="my-0 text-center">&copy; 2023 GEM Organizations, inst . All rights reserved.</p>
+                <p class="my-0 text-center">designed by GDD Impact</p>
+            </div>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     {% block extra_body %}{% endblock %}
 </body>
+
 </html>

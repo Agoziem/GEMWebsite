@@ -8,7 +8,7 @@ class Arm(models.Model):
 	Arm=models.CharField(max_length=300,blank=False)
 	sideline=models.CharField(max_length=300,blank=False)
 	Vision=models.TextField(max_length=400,blank=False, help_text="max of 400 words")
-	Mission=models.TextField(max_length=400,blank=False, help_text="max of 400 words")
+	Mission=models.TextField(max_length=400,blank=True, help_text="max of 400 words")
 
     
 	def __str__(self):

@@ -15,7 +15,7 @@ class Articles(models.Model):
 	Category=models.ForeignKey(Categorie,related_name="Articles",on_delete=models.CASCADE)
 	thumb=models.ImageField( upload_to="assets/Article/thumbnail", blank=False)
 	title=models.CharField(max_length=300,blank=False)
-	slug=models.CharField(max_length=300,blank=False)
+	slug=models.CharField(max_length=300,blank=True)
 	body=RichTextField()
 	date_published=models.DateTimeField(auto_now_add=True)
 	author=models.ForeignKey(User,related_name="Articles",on_delete=models.CASCADE)

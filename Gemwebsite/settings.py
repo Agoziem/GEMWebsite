@@ -175,3 +175,23 @@ JAZZMIN_SETTINGS = {
     "show_ui_builder":True,
     # "custom_css": "css/admin.css",
 }
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'height': '300px',
+        'width': '100%',
+        'toolbar': [
+            ['Format', 'Font', 'FontSize', 'TextColor', 'BGColor'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
+            ['Image', 'Table', 'HorizontalRule', 'SpecialChar'],
+            ['Maximize'],
+            ['Source', 'Undo', 'Redo']
+        ],
+        'font_size': '12px',
+        'colorButton_colors': '000000,ffffff'
+    }
+}
+
+
+
