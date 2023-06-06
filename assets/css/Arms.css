@@ -134,5 +134,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 350px;
+  width: 84.09vw;
+  max-width: 350px;
 }
