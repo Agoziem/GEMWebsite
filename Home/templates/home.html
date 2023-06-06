@@ -5,44 +5,47 @@
 <img class="Rectangle" src="{% static 'images/Bent Rectangle.png' %}" alt="">
 <section class="hero_section px-5" style="height:100vh;">
     <img class="Ellipse" src="{% static 'images/Ellipse.png' %}" alt="">
-    <div class="row justify-content-evenly align-items-center mt-5 mb-2">
+    <div class="row justify-content-evenly align-items-center mt-4 mt-md-5 mb-2">
         <div class="col-lg d-flex justify-content-center">
             <div class="hero_text_container">
-                <div class="hero_text">
+                <div class="hero_text text-center text-lg-start">
                     <span class="text1">GET</span><br>
                     <span class="text2">EQUIPPED</span><br>
                     <span class="text3">MISSION <div class="small_rectangle1"></div>
                         <div class="small_rectangle2"></div>
                     </span><br>
                 </div>
-                <p class="text4 p-0" style="font-size: 29px;">Equiping People , transforming the World</p>
-                <a href="#Contact" class="btn btn-primary"> Contact us</a>
+                <p class="text4 p-0 text-center text-lg-start">Equiping People , transforming the World</p>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a href="#Contact" class="btn btn-primary"> Contact us</a>
+                </div>
+                
             </div>
         </div>
-        <div class="col-lg hero_image_container d-flex justify-content-center">
-            <img class="hero_image" src="{% static 'images/Hero Image.png' %}" alt=""
-                style="width:100%;max-width: 500px;">
+
+        <div class="col-lg hero_image_container d-flex justify-content-center pt-4 pt-md-4 pt-lg-0">
+            <img class="hero_image" src="{% static 'images/Hero Image.png' %}" alt="">
         </div>
     </div>
 </section>
 
 <!-- About -->
-<section class="About px-5 mb-5">
+<section class="About px-5">
     <img class="Shield1" src="{% static 'images/Shield 2.svg' %}" alt="">
     <div class="About_container d-flex justify-content-center align-items-center flex-column">
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
         </div>
-        <h1 class="my-2">Welcome to GEM</h1>
+        <h1 class="my-2 text-center">Welcome to GEM</h1>
         <p class="leading_text text-center">
             Here, anything is possible;
             Dreams come true and you can
             live a life better than you ever imagined.
             You can live the Kingdom-life!
         </p>
-        <div class="row justify-content-evenly align-items-center g-5 my-2">
-            <div class="col-md">
+        <div class="row align-items-center g-5 my-1">
+            <div class="col-md d-flex justify-content-center">
                 <div class="about-card">
                     <img src="{% static 'images/Vision.svg' %}" alt="">
                     <div class="about_heading">Vision</div>
@@ -51,7 +54,7 @@
                         earth like it is in heaven.</div>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-md d-flex justify-content-center">
                 <div class="about-card">
                     <img src="{% static 'images/Mission.svg' %}" alt="">
                     <div class="about_heading">Mission</div>
@@ -60,7 +63,7 @@
                         earth like it is in heaven.</div>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-md d-flex justify-content-center">
                 <div class="about-card">
                     <img src="{% static 'images/GEM 2.svg' %}" alt="">
                     <div class="about_heading">About</div>
@@ -78,9 +81,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md">
-                <img src="{% static 'images/values.png' %}" alt="" class="img-fluid">
+                <img src="{% static 'images/values.png' %}" alt="" style="width: 103.6vw;max-width: 108%;">
             </div>
-            <div class="col-md flex-column align-items-center ms-4">
+            <div class="col-md flex-column align-items-center ms-4 mt-5 mt-md-0">
                 <h1>Our Values</h1>
                 <div class="rule my-4"></div>
                 {% if GEM.values.all %}
@@ -104,7 +107,7 @@
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
         </div>
-        
+
         <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
             organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
             earth like it is in heaven. </p>
@@ -126,7 +129,7 @@
 <!-- Projects -->
 <section class="my-3 py-5">
     <div class="container d-flex flex-column align-items-center">
-        <h1>GEM Projects</h1>
+        <h1 class="mb-0">GEM Projects</h1>
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
@@ -137,7 +140,7 @@
         <div class="row justify-content-evenly align-items-center mt-3 g-3">
             {% if projects %}
             {% for project in projects %}
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                 <div class="Project_card mx-2">
                     <img class="Project_card_img" src="{{ project.picture }}" alt="">
                     <div class="Project_card_text">{{ project.description|truncatewords:25}}</div>
@@ -158,7 +161,7 @@
     <img class="Ellipse1" src="{% static 'images/Ellipse 2.png' %}" alt="">
     <img class="Ellipse2" src="{% static 'images/Ellipse 2.png' %}" alt="">
     <div class="container d-flex flex-column align-items-center">
-        <h1>Articles</h1>
+        <h1 class="mb-0">Articles</h1>
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
@@ -166,10 +169,10 @@
         <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
             organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
             earth like it is in heaven. </p>
-        <div class="row justify-content-evenly align-items-center mt-3 g-3">
+        <div class="row justify-content-evenly align-items-center mt-3 g-3 ">
             {% if articles %}
             {% for article in articles %}
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                 <div class="Project_card mx-2">
                     <img class="Project_card_img" src="{{ article.thumb.url }}" alt="">
                     <div class="Project_card_text">{{ article.body|safe|truncatewords:25}}</div>
@@ -194,7 +197,9 @@
             <div class="col-md d-flex flex-column align-items-center">
                 {% if Main_event %}
                 {% for event in Main_event %}
-                <img src="{{ event.picture }}" alt="" style="width: 250px;">
+                <a href="{{ event.picture }}" target="_blank">
+                    <img src="{{ event.picture }}" alt="" style="width: 250px;" class="rounded shadow-sm">
+                </a>              
                 <h4 class="mt-4">Join us on Zoom</h4>
                 <div class="d-flex justify-content-center align-items-center">
                     <img src="{% static 'images/Zoom.png' %}" alt="" style="height:60px;width: auto;">
@@ -206,26 +211,29 @@
                 {% endfor %}
                 {% endif %}
             </div>
-            <div class="col-md">
-                <h1>Upcoming Events</h1>
+            <div class="col-md pt-5 d-flex flex-column justify-content-center align-items-center">
+                <h1 class="mb-0 text-center" style="font-size: 29px;">Upcoming Events</h1>
                 <div class="rule d-flex align-items-center">
                     <div class="rule_blue my-4"></div>
                     <div class="rule_ash my-4"></div>
                 </div>
                 {% if Main_event %}
                 {% for event in events %}
-                <div class="card mb-3" style="max-width: 540px; border: none; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                <div class="card mb-3"
+                    style="max-width: 540px; border: none; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                     <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{ event.picture }}" class="img-fluid rounded-start" alt="..."
-                                style="max-width: 150px; height: auto;">
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <a href="{{ event.picture }}" target="_blank">
+                                <img src="{{ event.picture }}" class=" img-fluid rounded-start" alt="..."
+                                style="max-width: 150px;height: 100%;">
+                            </a>                         
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md col-lg-8">
                             <div class="card-body">
                                 <h4 class="card-title" style="font-weight: 600;">{{ event.Title }}</h4>
                                 <p class="card-text">{{ event.description|truncatewords:20}}</p>
-                                <p class="card-text"><small class="text-muted">{{ event.Day }} 
-                                    {{ event.Month}}</small>&nbsp&nbsp<span class="fw-bold" style="color:#18ADE5">
+                                <p class="card-text"><small class="text-muted">{{ event.Day }}
+                                        {{ event.Month}}</small>&nbsp&nbsp<span class="fw-bold" style="color:#18ADE5">
                                         <i class="fa-solid fa-clock h5 me-1"></i> {{ event.Time }}</span></p>
                             </div>
                         </div>
@@ -256,19 +264,16 @@
             <div class="col-md-6 col-lg-4">
                 <div class="Staff_card mx-2">
                     <img class="Staff_card_img" src="{{ Staff.picture }}" alt="">
-                    <div class="Staff_card_text text-center" >{{ Staff.Name }} <br>
+                    <div class="Staff_card_text text-center">{{ Staff.Name }} <br>
                         <span class="text-center text-muted small fw-normal">{{ Staff.Responsibility }}</span>
                     </div>
                     <div class="d-flex justify-content-center mt-0 mb-2">
-                       <span>
+                        <span>
                             <a class="me-2" href="#"><i class="fa-brands fa-facebook" style="font-size: 22px;"></i></a>
-                    
-                            <a class="me-2" href="#"><i class="fa-brands fa-instagram"
-                                         style="font-size: 22px;"></i></a>
-                             <a class="me-2" href="#"><i class="fa-brands fa-whatsapp"
-                                         style="font-size: 22px;"></i></a>
-                             <a class="" href="#"><i class="fa-brands fa-twitter"
-                                         style="font-size: 22px;"></i></a>
+
+                            <a class="me-2" href="#"><i class="fa-brands fa-instagram" style="font-size: 22px;"></i></a>
+                            <a class="me-2" href="#"><i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i></a>
+                            <a class="" href="#"><i class="fa-brands fa-twitter" style="font-size: 22px;"></i></a>
                         </span>
                     </div>
                 </div>
@@ -286,15 +291,20 @@
             <div class="col-md">
                 <img src="{% static 'images/Support.png' %}" alt="" class="img-fluid">
             </div>
-            <div class="col-md flex-column align-items-center ms-4">
-                <h1>GEM Foundation</h1>
+            <div class="col-md flex-column align-items-center ms-4 pt-4">
+                <h1 class="text-center text-start-md">GEM Foundation</h1>
                 <div class="rule my-4"></div>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis labore, iste consequuntur exercitationem itaque numquam voluptatem unde reprehenderit ab quaerat repellendus odit. Nostrum recusandae itaque voluptates sunt, ratione quos esse molestiae magnam fuga. Adipisci, veritatis architecto. Laborum libero ullam laboriosam vel. Maxime earum error neque laudantium aliquam itaque facere?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis labore, iste consequuntur
+                    exercitationem itaque numquam voluptatem unde reprehenderit ab quaerat repellendus odit. Nostrum
+                    recusandae itaque voluptates sunt, ratione quos esse molestiae magnam fuga. Adipisci, veritatis
+                    architecto. Laborum libero ullam laboriosam vel. Maxime earum error neque laudantium aliquam itaque
+                    facere?
                 </div>
-                <div class="d-flex align-items-center justify-content-evenly py-2 mt-2" style="border: #18ADE5 solid 2px; border-radius: 15px;">
+                <div class="d-flex align-items-center justify-content-evenly py-2 mt-3"
+                    style="border: #18ADE5 solid 1.9px;border-radius: 15px;padding: 20px;">
                     <div>
-                        to support and make Donations click the button 
+                        to support and make Donations click the button
                     </div>
                     <a href="{% url 'Payment:initiate' %}" class="btn btn-primary p-2 px-3"> Donate now </a>
                 </div>
@@ -306,14 +316,13 @@
 <!-- GEM gallery -->
 <section class="Gallery my-5 px-3 py-5">
     <div class="Gallery-text container d-flex flex-column align-items-center">
-        <h1>Activities on Frame</h1>
+        <h1 class="text-center text-start-md">Activities on Frame</h1>
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
         </div>
         <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
-            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
-            earth like it is in heaven.
+            organizations radiating the glory of God.
         </p>
         <div class="d-flex justify-content-center">
             <div class="Photogallery">
@@ -325,7 +334,7 @@
             </div>
         </div>
 
-        <a href="#" class=" btn btn-primary mt-3">
+        <a href="{% url 'gallery' %}" class=" btn btn-primary mt-3">
             see more Pictures
         </a>
     </div>

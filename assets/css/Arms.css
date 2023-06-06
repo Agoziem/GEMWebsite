@@ -1,68 +1,68 @@
 #Armcover {
-    width: 100%;
-    height: 250px;
-    /* background: #00072B; */
-    margin-bottom: 20px;
-    position: relative;
-    /* background-image: url('../images/Team Background.jpg'); */
-    background-position: center;
-    background-size: cover;
-  }
-  
-  #Armcover::before {
-    content: '';
-    position: absolute;
-    background-color: #010141;
-    opacity: 0.6;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #Armcovertext {
-    position: relative;
-    z-index: 1;
-    top: 50%;
-    padding: 0 80px;
-    transform: translateY(-50%);
-    text-align: center;
-  }
-  
-  #Armcover-text {
-    color: #fff;
-    font-size: 55px;
-    font-family: var(--main-font-family);
-    line-height: 49px;
-    font-weight: 700;
-    font-style: normal;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
-    margin-bottom: 9px;
-  }
+  width: 100%;
+  height: 250px;
+  /* background: #00072B; */
+  margin-bottom: 20px;
+  position: relative;
+  /* background-image: url('../images/Team Background.jpg'); */
+  background-position: center;
+  background-size: cover;
+}
 
-  .indicator-container {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#Armcover::before {
+  content: '';
+  position: absolute;
+  background-color: #010141;
+  opacity: 0.6;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#Armcovertext {
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  padding: 0 80px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+#Armcover-text {
+  color: #fff;
+  font-size: 55px;
+  font-family: var(--main-font-family);
+  line-height: 49px;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  margin-bottom: 9px;
+}
+
+.indicator-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;  
-    margin: 0 5px;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
 .indicator.active {
-    background-color: #18ADE5;
+  background-color: #18ADE5;
 }
 
 
@@ -73,7 +73,7 @@
   margin-bottom: 20px;
   position: relative;
   background-image: url('../images/People_praying.jpg');
-  background-position: center ;
+  background-position: center;
   background-size: cover;
 }
 
@@ -107,22 +107,32 @@
   font-weight: 700;
   font-style: normal;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+
+}
+
+#Armdetailcovertext p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   margin-bottom: 9px;
 }
 
-.Arm{
+.Arm {
   position: relative;
 }
 
-.Arm_card{
+.Arm_card {
   position: relative;
   z-index: 1000;
 }
 
-.Shield_Arm{
+.Shield_Arm {
   position: absolute;
   top: 0;
   left: 0;
   width: 350px;
 }
-

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gem Arms{% endblock %}
+
+{% block content %}
+<div id="Armdetailcover">
+    <div id="Armdetailcovertext">
+        <div id="Armdetailcover-text">
+            {{ arm.Arm }}
+        </div>
+        <p>
+            Loving People, Developing Society.
+        </p>
+    </div>
+</div>
+<div class="container d-flex flex-column align-items-center">
+    <h1 class="mt-2">Welcome to GEM {{ arm.Arm }}</h1>
+    <div class="rule d-flex align-items-center justify-content-center mb-4">
+        <div class="rule_blue"></div>
+        <div class="rule_ash"></div>
+    </div>
+    <p class="leading_text">
+        "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap. For with the measure you use, it will be measured to you." - Luke 6:38 (NIV)
+    </p>
+
+    <!-- Vision, Mission and Task -->
+    <div class="row justify-content-evenly my-2 mb-5 align-items-center">
+        <div class="col-md">
+            <img src="{{ arm.picture }}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
+        </div>
+        <div class="col-md ms-4">
+            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #ff0000; border-radius: 20px;">
+                <div>
+                    <h4 class="fw-bold"> Vision </h4>
+                    <span class="display:block"><i>The Best Life for All</i></span>
+                    <p>To see people become their best, and to see society thrive at its best
+                    </p>
+                </div>
+                <div>
+                    <h4 class="fw-bold"> Mission </h4>
+                    <span class="display:block"><i>Revival and Restoration</i></span>
+                    <p>To make the world a better place by loving people and developing society.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="p-4 mt-3" style="border: 2px solid #ccc; border-radius: 10px;">
+                <h3 class="fw-bold"> For Support & Partnership </h3>
+                You can Choose to support in Cash or Partner with us as a GEM Partner to reach out to as many Souls out there , in need of help and Charity.
+                Pls Contact us on getequippedmission@gmail.com and for Donations , you can click the Button , to get started <a href="{% url 'Payment:initiate' %}" class="ms-3 btn btn-primary"> Donate Now </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="long_rule"></div>
+
+    <div class="row justify-content-evenly my-5">
+        <div class="col-md">
+            <h3 class="fw-bold text-center">Photo Speaks </h3>
+            <div class="row g-4">
+                <img class="col-md-6 img-fluid rounded " src="{% static 'images/Foundation1.jpeg' %}" alt="" style="height: 250px; object-fit:cover;" >
+                <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation2.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation3.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation4.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <a href="{% url 'gallery' %}" class="btn btn-primary">View more Photos</a>
+            </div>
+        </div>
+
+
+        <div class="col-md ps-0 ps-md-5">
+            <div class="bg-light px-5 py-4 shadow-sm" style="border-left: 5px solid #10e022; border-radius: 20px;">
+                <div>
+                    <h3 class="fw-bold mb-3"> What we do </h3>
+                    <div class="d-flex justify-content-center">
+                        <i class="fa-sharp fa-solid fa-circle-check me-3 h6" style="color:#10e022"></i>
+                        <p>
+                            Love people by showing care and kindness. Providing guidance and resources to enable people
+                            develop their potential and grow to become their best.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center ">
+                        <i class="fa-sharp fa-solid fa-circle-check me-3 h6" style="color:#10e022"></i>
+                        <p>
+                            Develop society into a safe and advanced place that is suitable for human progress and
+                            for the fulfillment of humanity’s purpose.
+                        </p>
+                    </div>
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa-sharp fa-solid fa-circle-check me-3 h6" style="color:#10e022"></i>
+                        </div>   
+                        <div>
+                            <p>
+                                We Provide support in the areas of
+                            </p>
+                            <ul>
+                                <li>Food and Water</li>
+                                <li>Clothing and Shelter</li>
+                                <li>Healthcare and Education,</li>
+                                <li>Business Grants and Skill Acquisition Programs,</li>
+                                <li>Other Supportive Projects.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa-sharp fa-solid fa-circle-check me-3 h6" style="color:#10e022"></i>
+                        </div>
+     
+                        <div>
+                            <p>
+                                GEM Foundation Outreaches
+                            </p>
+                            <ul>
+                                <li>Easter Outreach</li>
+                                <li>Summer Outreach</li>
+                                <li>Christmas Outreach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var armCoverbackground = document.getElementById('Armdetailcover');
+    armCoverbackground.style.backgroundImage = 'url("/static/images/uk-giving.jpg")'
+</script>
+{% endblock %}

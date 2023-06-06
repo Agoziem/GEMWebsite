@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gem Arms{% endblock %}
+
+{% block content %}
+<div id="Armdetailcover">
+    <div id="Armdetailcovertext">
+        <div id="Armdetailcover-text">
+            {{ arm.Arm }}
+        </div>
+        <p>
+            Empowering People to Grow in Christ & in the Kingdom
+        </p>
+    </div>
+</div>
+<div class="container d-flex flex-column align-items-center">
+    <h1 class="mt-2">Welcome to GEM {{ arm.Arm }}</h1>
+    <div class="rule d-flex align-items-center justify-content-center mb-4">
+        <div class="rule_blue"></div>
+        <div class="rule_ash"></div>
+    </div>
+    <span class="display:block"><i> Greater Intimacy, Glory, & Dominion.</i></span>
+    <p class="leading_text">
+        To see people live in greater intimacy with God,
+        expressing their full glory and dominion in the Kingdom of God.
+    </p>
+    <!-- Vision, Mission and Task -->
+    <div class="row justify-content-evenly align-items-center my-5" style="width: 100%;">
+        <div class="col-md">
+            <img src="{{ arm.picture }}" alt="" class="img-fluid img-thumbnail shadow-sm" style="border-radius: 20px;">
+        </div>
+        <div class="col-md ms-4">
+            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
+                <div>
+                    <h4 class="fw-bold"> Mission </h4>
+                    <p>
+                    <div><i>Empowering People to Grow in Christ & in the Kingdom.</i></div>
+                    Equipping people with teachings and truth to grow in Christ and in the Kingdom of God.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="fw-bold"> Operational Goals </h4>
+                    <p>
+                    <ul>
+                        <li>Sunday Bible Study 3pm - 5pm</li>
+                        <li>Daily GEMS on IG - Pictures & videos, devotional, scriptures, inspiration</li>
+                        <li>Social media ads - advertising upcoming series. Ask people to register</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="long_rule"></div>
+</div>
+
+<div class="container">
+    <div class="row align-items-center my-5">
+        <div class="col-md">
+            <div class="shadow-sm">
+                <h2 class="fw-bold text-center">
+                    Goals
+                </h2>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Reveal The Reality of Christ and The Kingdom
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Revealing the Eternal King. King Father, King-Son, King Spirit, and The Royal
+                                        Priesthood.</li>
+                                    <li>Revealing the Kingdom of Love, Light & Life. (The Wisdom, Power & Love of the
+                                        Kingdom).</li>
+                                    <li>Revealing the Kingdom Foundations of Righteous & Justice, Love & Faithfulness,
+                                        Peace & Joy.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Equip People To Be Mature In The Pillars Kingdom Living:
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div><span class="fw-bold">Grace:</span>God’s Unmerited Favour for Salvation,
+                                    Righteousness,
+                                    & Blessings. God’s Divine Empowerment for Intimacy, Glory, & Dominion. </div>
+                                <div><span class="fw-bold">Truth:</span> Truth about God’s Person, Purpose, Product,
+                                    Power, &
+                                    Principles. </div>
+                                <div><span class="fw-bold">Faith:</span> Absolute Trust in God, in His Word, Blessings,
+                                    Promises, & Faithfulness.</div>
+                                <div><span class="fw-bold">Spirit:</span> Yielded to His Person & Presence, Fellowship &
+                                    Fruits, Gifts & Spirits.</div>
+                                <div><span class="fw-bold">Authority & Power:</span> Authority in the name of Jesus and
+                                    the
+                                    Anointing of the Spirit.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Equip People To Be Mature In Kingdom Lifestyle:
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Daily Life of a Son/Daughter of God & Kingdom Ambassador
+                                    </li>
+                                    <li>Consistent in Spiritual, Mental & Physical Exercises. (Prayer & Fasting, Praise
+                                        & Worship, Study & Meditation, Fitness & Health).</li>
+                                    <li>Works of Faith, Labour of Love, Patience in Hope.</li>
+                                    <li>Consistent in Kingdom Values/Virtues: Wisdom, Humility, Commitment,
+                                        Responsibility, Hope &
+                                        Integrity, Faith & Patience, Love.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Four  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Equip People To Be Mature In Intimacy:
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Hosting God – Fellowship with the Father, Son, & Spirit.
+                                    </li>
+                                    <li>Living in Oneness with the Father, Son, & Spirit;</li>
+                                    <li>Living in the Consciousness, Communion, & Cooperation of the Spirit.</li>
+                                    <li>Loving God, Loving People.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Five  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                Equip People To Be Mature In Glory:
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Representing God – Fullness of God.
+                                    </li>
+                                    <li>Living as the Express Image & Likeness of God.</li>
+                                    <li>Reflecting, Revealing, & Radiating God.
+                                    <li>Manifesting His Love & Wisdom, Presence & Power, Glory & Dominion.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Six  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                Equip People To Be Mature In Dominion:
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Reproducing God – Fulfillment of God’s Will.
+                                    </li>
+                                    <li>Excelling in Dominion. | Fruitful, Multiply, Saturate & Dominate.</li>
+                                    <li>Transforming the world through dominion into a domain of Love, Light, & Life
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md ">
+            <div class="bg-light p-4 my-3 shadow-sm ms-3" style="border-left: 5px solid #10e022; border-radius: 20px;">
+                <h4 class="fw-bold"> Teaching Series
+                </h4>
+                <ol>
+                    <li>January - February: Wisdom Series.</li>
+                    <li>March - April: The Finished Work of Christ, Easter.</li>
+                    <li>May - June: Our Reality in Christ, Abiding and Fellowship.</li>
+                    <li>July - August: Holy Spirit Series.</li>
+                    <li>September - October: Abba Father Series.</li>
+                    <li>November - December: Kingdom Series, Christmas.</li>
+                </ol>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="{% static 'images/BibleTeaching.png' %}" alt="" class="mt-2"
+                    style="border-radius: 20px; width: 95%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var armCoverbackground = document.getElementById('Armdetailcover');
+    armCoverbackground.style.backgroundImage = 'url("/static/images/360_F_325573400_vJOHbhpko6hGfu5upAc7sOyqAgdhE5K0.jpg")'
+</script>
+{% endblock %}

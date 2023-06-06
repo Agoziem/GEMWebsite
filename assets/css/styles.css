@@ -33,7 +33,7 @@ h1 {
     font-family: 'Century Gothic';
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
+    font-size: min(max(10vw, 35px), 45px);
 
 }
 
@@ -46,7 +46,8 @@ h1 {
 
 /* Icons styling */
 .fa-brands,
-.fa-solid,.fas {
+.fa-solid,
+.fas {
     color: var(--btn-primary);
 }
 
@@ -103,91 +104,91 @@ main {
     height: 100%;
     z-index: 9999;
     transition: all 0.3s ease-in-out;
-  }
-  
-  
-  .menu.active {
-      left: 0;
-      top: 67px;
-    }
-  
-  /* The main Menu */
-  
-  .menu ul {
+}
+
+
+.menu.active {
+    left: 0;
+    top: 67px;
+}
+
+/* The main Menu */
+
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 11px 22px;
     height: 100%;
     width: 100%;
-  }
-  
-  .menu ul li {
+}
+
+.menu ul li {
     font-weight: 500;
-  }
-  
-  .menu ul li a {
+}
+
+.menu ul li a {
     display: block;
     padding: 10px 5px;
     text-decoration: none;
     color: var(--bg-wine-red);
     font-size: 18px;
     font-weight: 600;
-  }
-  
-  /* /////////////////////////////// */
-  /* Sub Menu  */
-  
-  .menu .sub-menu{
-      display: none;
-      background-color: var(--main-bg-color);
-      min-width: 200px;
-      transition: all 0.3s ease-in-out;
-    }
-  
-    .menu .sub-menu.active{
-      display: block;
-      margin-left: -5px;
-      min-width: 200px;
-    }
-  
-  .menu ul ul li a {
+}
+
+/* /////////////////////////////// */
+/* Sub Menu  */
+
+.menu .sub-menu {
+    display: none;
+    background-color: var(--main-bg-color);
+    min-width: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu .sub-menu.active {
     display: block;
-    padding: 8px  15px;
+    margin-left: -5px;
+    min-width: 200px;
+}
+
+.menu ul ul li a {
+    display: block;
+    padding: 8px 15px;
     text-decoration: none;
     color: #000;
     font-size: 17px;
-  }
-  
-  /* /////////////////////////////// */
-  /* hamburger styling */
-  .hamburger-menu {
+}
+
+/* /////////////////////////////// */
+/* hamburger styling */
+.hamburger-menu {
     display: block;
     cursor: pointer;
     z-index: 999;
     padding-right: 10px;
-  }
-  
-  .bar {
+}
+
+.bar {
     width: 25px;
     height: 3px;
     margin: 5px;
     background-color: var(--blue);
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .hamburger-menu.active .bar:nth-child(1) {
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-  }
-  
-  .hamburger-menu.active .bar:nth-child(2) {
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
     opacity: 0;
-  }
-  
-  .hamburger-menu.active .bar:nth-child(3) {
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
-  
-  /* /////////////////////////////// */
+}
+
+/* /////////////////////////////// */
 
 .footer {
     background-color: var(--bg-Deep-Navy-Blue);
@@ -240,6 +241,9 @@ main {
     }
 }
 
+
+
+
 /* hero Section styling */
 
 .Rectangle {
@@ -279,7 +283,7 @@ main {
 }
 
 .hero_text .text2 {
-    font-size: 122px;
+    font-size: 9.98vw;
 }
 
 .hero_text .text3 {
@@ -319,18 +323,209 @@ main {
     font-size: 1.1rem;
 }
 
+.hero_image {
+    width: 32.6vw;
+    max-width: 500px;
+}
+
+/* for Rectangle for Screens below large Screen  */
+@media (max-width:992px) {
+    .Rectangle {
+        width: 80vw;
+        height: 100vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+
+@media (max-width:765px) {
+    .Rectangle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    .hero_section {
+        position: relative;
+    }
+
+    .Ellipse {
+        position: absolute;
+        bottom: -294px;
+        left: 42px;
+        width: 150px;
+    }
+
+    .hero_section .row {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero_text {
+        line-height: 6em;
+        color: #010141;
+        font-weight: 700;
+        font-style: normal;
+        font-family: 'Century Gothic';
+    }
+
+    .hero_text .text1 {
+        font-size: 75px;
+    }
+
+    .hero_text .text2 {
+        font-size: 122px;
+    }
+
+    .hero_text .text3 {
+        border: 3px solid rgba(24, 173, 229, 0.38);
+        font-size: 74px;
+        padding: 15px;
+        position: relative;
+    }
+
+    .small_rectangle1 {
+        position: absolute;
+        top: -13px;
+        left: -12px;
+        width: 22.73px;
+        height: 25px;
+        background-color: #010141;
+    }
+
+    .small_rectangle2 {
+        position: absolute;
+        bottom: -13px;
+        right: -12px;
+        width: 22.73px;
+        height: 25px;
+        background-color: #010141;
+    }
+
+    .hero_text_container p {
+        color: #010141;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    .hero_text_container .btn-primary {
+        width: 30%;
+        padding: 0.6rem 1.75rem;
+        font-size: 1.1rem;
+    }
+
+    .hero_image {
+        width: 89.6vw;
+        max-width: 450.7px;
+    }
+}
+
+@media (max-width:576px) {
+    .Rectangle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .hero_section {
+        position: relative;
+    }
+
+    .Ellipse {
+        display: none;
+    }
+
+    .hero_section .row {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero_text {
+        line-height: 17vw;
+        color: #010141;
+        font-weight: 700;
+        font-style: normal;
+        font-family: 'Century Gothic';
+    }
+
+    .hero_text .text1 {
+        font-size: clamp(15.6vw, 15.6vw, 68px);
+    }
+
+    .hero_text .text2 {
+        font-size: clamp(19.16vw, 19.16vw, 84px);
+    }
+
+    .hero_text .text3 {
+        border: 2px solid rgba(24, 173, 229, 0.38);
+        font-size: clamp(13.31vw, 13.31vw, 58px);
+        padding: 10px;
+        position: relative;
+    }
+
+    .small_rectangle1 {
+        position: absolute;
+        top: -9px;
+        left: -9px;
+        width: 16px;
+        height: 16px;
+        background-color: #010141;
+    }
+
+    .small_rectangle2 {
+        position: absolute;
+        bottom: -7px;
+        right: -9px;
+        width: 16px;
+        height: 16px;
+        background-color: #010141;
+    }
+
+    .hero_text_container p {
+        color: #010141;
+        font-style: normal;
+        font-weight: 500;
+        /* font-size:  clamp(4.4vw,3vw,17px); */
+        font-size: min(max(4.4vw, 15px), 25px);
+        margin-top: 15px;
+    }
+
+    .hero_text_container .btn-primary {
+        width: 44%;
+        padding: 0.6rem 1.75rem;
+        font-size: 0.9rem;
+    }
+
+    .hero_image {
+        width: 89.6vw;
+        /* clamp(89.6vw, 200px, 960px) */
+        max-width: 352.7px;
+    }
+
+}
+
 /* ///////////////////////////////// */
+
+
+
 
 /* About Styling */
 
-.rule_blue{
+.rule_blue {
     width: 12vw;
     max-width: 120px;
     height: 8px;
     background: #18ADE5;
 }
 
-.rule_ash{
+.rule_ash {
     width: 12vw;
     max-width: 96px;
     height: 8px;
@@ -339,13 +534,28 @@ main {
 
 .About {
     position: relative;
+    margin-top: calc(94.6vw - 282px);
+}
+
+@media (min-width:768px) {
+    .About {
+        position: relative;
+        margin-top: 20vw;
+    }
+}
+
+@media (min-width:992px) {
+    .About {
+        position: relative;
+        margin-top: -5vw;
+    }
 }
 
 .Shield1 {
     position: absolute;
     top: 0;
     right: 0;
-    width: 400px;
+    width: 295px;
 }
 
 .About_container {
@@ -470,7 +680,8 @@ main {
     top: 0px;
     left: 0px;
     z-index: -1000;
-    width: 350px;
+    width: 82.7vw;
+    max-width: 292px;
 }
 
 /* ////////////////////////// */
@@ -536,14 +747,15 @@ main {
     max-width: 800px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: .7vw;
+    grid-gap: max(1.7vw, 14px);
 }
 
 
 .Photogallery img {
     height: 200px;
     /* set the height of the images */
-    width: auto;
+    width: 100%;
+    gap: 20px;
     /* let the width adjust proportionally */
     object-fit: cover;
     /* maintain aspect ratio and crop to fill container */

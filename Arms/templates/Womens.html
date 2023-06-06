@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gem Arms{% endblock %}
+
+{% block content %}
+<div id="Armdetailcover">
+    <div id="Armdetailcovertext">
+        <div id="Armdetailcover-text">
+            {{ arm.Arm }}
+            
+        </div>
+    </div>
+</div>
+<div class="container d-flex flex-column align-items-center">
+    <h1 class="mt-2">Welcome to GEM {{ arm.Arm }}</h1>
+    <div class="rule d-flex align-items-center justify-content-center mb-4">
+        <div class="rule_blue"></div>
+        <div class="rule_ash"></div>
+    </div>
+    <p class="leading_text">Bring Freedom from stereotypes, shame, & lies. | Gain Confidence through developed character,
+        competence & community. | Live Fulfilled by exploring their God given passion & dreams.
+    </p>
+
+    <!-- Vision, Mission and Task -->
+    <div class="row justify-content-evenly my-5 mt-2 align-items-center">
+        <div class="col-md">
+            <img src="{{ arm.picture }}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
+        </div>
+        <div class="col-md ps-5">
+            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
+                <div>
+                    <h4 class="fw-bold"> Vision </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error fugiat quasi recusandae veniam
+                        minima
+                        asperiores?
+                    </p>
+                </div>
+                <div>
+                    <h4 class="fw-bold"> Mission </h4>
+                    <p>To raise a nation of queens leading with virtue and authority.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="fw-bold"> Task </h4>
+                    <ul>
+                        <li>Bringing clarity to the identity and peculiarities of womanhood.</li>
+                        <li>Empowering women to live with character, competence, confidence, and community.</li>
+                        <li>Empowering women to excel in every area of their lives.</li>
+                        <li>Empowering women to excel in at least one of the seven spheres of society</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="long_rule"></div>
+
+    <div class="row justify-content-evenly my-5 align-items-center">
+        <div class="col-md">
+            <img src="{% static 'images/Man Praying.jpg' %}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
+        </div>
+        <div class="col-md ms-4">
+            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #10e022; border-radius: 20px;">
+                <div>
+                    <h4 class="fw-bold"> Goal — Maturity & Excellence
+                    </h4>
+                    <p>Maturity (shine and reign) in the 7 spheres of life:
+                    </p>
+                    <ol>
+                        <li>Spirit: Built for intimacy, glory and dominion</li>
+                        <li>Soul: Emotional, mental, and will-power development.</li>
+                        <li>Body: Health, Fitness, & Beauty.</li>
+                        <li>Life-Path: Purpose, vision, mission, goals, career & legacy.</li>
+                        <li>Life-Style: Philosophy, Principles, Time Appropriation.</li>
+                        <li>Relationship: Family, Social, Professional.</li>
+                        <li>Resources: Stewardship, Management, and Finance.</li>
+                    </ol>
+                    <p>Maturity (shine and reign) in at least one of the seven spheres of society:
+                    </p>
+                    <ol>
+                        <li>Faith</li>
+                        <li>Education, Science & Technology.</li>
+                        <li>Hospitality & Healthcare.</li>
+                        <li>Government: Politics, Judiciary, & Law Enforcement.</li>
+                        <li>Culture & Arts, Music & Entertainment, Media & Sports.</li>
+                        <li>Personal Development, Family & Relationship.</li>
+                        <li>Economy: Business & Commerce</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    var armCoverbackground = document.getElementById('Armdetailcover');
+    armCoverbackground.style.backgroundImage='url("/static/images/istockphoto-1333810621-612x612.jpg")'
+</script>
+{% endblock %}

@@ -67,7 +67,7 @@
                 <a href="{% url 'home' %}"><img src="{% static 'images/GEM Logo.png' %}" alt="..."
                         class="brand_image img-fluid"></a>
             </div>
-            <div class="d-flex d-md-none align-items-center justify-content-center">
+            <div class="d-flex d-lg-none align-items-center justify-content-center">
                 <div class="nav-item-envelope me-3 position-relative">
                     <a class="nav-link pt-3">
                         <i class="fas fa-envelope h2 "></i>
@@ -104,8 +104,22 @@
                     <li class="nav-item me-2">
                         <a href="#" class="nav-link">about</a>
                     </li>
-                    <li class="nav-item me-2">
+                    <!-- <li class="nav-item me-2">
                         <a href="{% url 'Arms:arms' %}" class="nav-link">Arms</a>
+                    </li> -->
+
+                    <li class="nav-item me-2 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Arms
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink" style="border: 1px solid #18ADE5;">
+                            <li><a class="dropdown-item" href="{% url 'Arms:arms' %}">Arms Page</a></li>
+                            <li><a class="dropdown-item" href="{% url 'Arms:Bible_Studies' %}">Bible Studies</a></li>
+                            <li><a class="dropdown-item" href="{% url 'Arms:Revival_Prayer' %}">Revival Prayers</a></li>
+                            <li><a class="dropdown-item" href="{% url 'Arms:Foundations' %}">Foundations</a></li>
+                            <li><a class="dropdown-item" href="{% url 'Arms:Womens_Hub' %}">Women</a></li>
+                        </ul>
                     </li>
 
                     <li class="nav-item me-2">
@@ -125,11 +139,18 @@
                         <a href="{% url 'Accounts:login' %}" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a href="{% url 'Accounts:signup' %}" class="nav-link btn btn-primary" style="color: white;">Signup</a>
+                        <a href="{% url 'Accounts:signup' %}" class="nav-link btn btn-primary"
+                            style="color: white;">Signup</a>
                     </li>
                     {% else %}
+                    {% if request.user.is_staff %}
                     <li class="nav-item me-2">
-                        <a href="{% url 'Accounts:logout' %}" href="#" class="nav-link btn btn-primary" style="color: white;">Log out</a>
+                        <a href="/admin" class="nav-link" target="_blank">Admin</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item me-2">
+                        <a href="{% url 'Accounts:logout' %}" href="#" class="nav-link btn btn-primary"
+                            style="color: white;">Log out</a>
                     </li>
                     {% endif %}
                 </ol>
@@ -140,21 +161,44 @@
     <!-- Navbar for Small Screen -->
     <nav class="menu d-block d-lg-none">
         <ul>
-            <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i> Home</a></li>
+            <li><a href="{% url 'home' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i> Home</a></li>
             <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>about</a></li>
-            <li><a href="{% url 'Arms:arms' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Arms</a></li>
+            <!-- <li><a href="{% url 'Arms:arms' %}" class="menulink"><i
+                        class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Arms</a></li> -->
+
+            <li class="me-2 dropdown">
+                <a class="dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>
+                    Arms
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                    <li><a class="menulink dropdown-item" href="{% url 'Arms:arms' %}">Arms Page</a></li>
+                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Bible_Studies' %}">Bible Studies</a></li>
+                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Revival_Prayer' %}">Revival Prayers</a></li>
+                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Foundations' %}">Foundations</a></li>
+                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Womens_Hub' %}">Women</a></li>
+                </ul>
+            </li>
             <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Projects</a></li>
-            <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Articles & News</a></li>
-            <li><a href="{% url 'gallery' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Gallery</a></li>
-            <li><a href="{% url 'Payment:initiate' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Support</a></li>
+            <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Articles &
+                    News</a></li>
+            <li><a href="{% url 'gallery' %}" class="menulink"><i
+                        class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Gallery</a></li>
+            <li><a href="{% url 'Payment:initiate' %}" class="menulink"><i
+                        class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Support</a></li>
             {% if not user.is_authenticated %}
-            <li><a href="{% url 'Accounts:login' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Login</a></li>
-            <li><a href="{% url 'Accounts:signup' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Signup</a></li>
+            <li><a href="{% url 'Accounts:login' %}" class="menulink"><i
+                        class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Login</a></li>
+            <li><a href="{% url 'Accounts:signup' %}" class="menulink"><i
+                        class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Signup</a></li>
             {% else %}
-            <li><a href="{% url 'Accounts:logout' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Logout</a></li>
+            <li><a href="{% url 'Accounts:logout' %}" class="menulink"><i
+                        class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Logout</a></li>
             {% endif %}
             {% if request.user.is_staff %}
-            <li><a href="/admin" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i> Admin</a></li>
+            <li><a href="/admin" class="menulink" target="_blank"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i> Admin</a>
+            </li>
             {% endif %}
         </ul>
     </nav>
@@ -211,13 +255,13 @@
                     <li class="nav-item mb-2"><a href="/#About" class="nav-link p-0">about</a></li>
                     <li class="nav-item mb-2"><a href="/#Projects" class="nav-link p-0">Projects</a></li>
                     <li class="nav-item mb-2"><a href="/#Articles" class="nav-link p-0">Articles & News</a></li>
-                    <li class="nav-item mb-2"><a href="/#Gallery" class="nav-link p-0">Gallery</a></li>
-                    <li class="nav-item mb-2"><a href="/#Contact" class="nav-link p-0">Contact</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'gallery' %}" class="nav-link p-0">Gallery</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'Payment:initiate' %}" class="nav-link p-0">Support</a></li>
                 </ul>
             </div>
 
             <div class="col-5 col-md-2 py-3 pt-md-0">
-                <h5>Articles</h5>
+                <h5>Articles (Coming Soon)</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Health</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Politics</a></li>
@@ -230,13 +274,11 @@
             <div class="col-5 col-md-2">
                 <h5>GEM ARMS</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Center</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Kingdom</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Men's Hub</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Women's Hub</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Kid's Hub</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">GEM Foundation</a></li>
-        
+                    <li class="nav-item mb-2"><a href="{% url 'Arms:Bible_Studies' %}" class="nav-link p-0">GEM Bible Studies</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'Arms:Revival_Prayer' %}" class="nav-link p-0">GEM Revival Prayers</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'Arms:Foundations' %}" class="nav-link p-0">GEM Foundations</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'Arms:Womens_Hub' %}" class="nav-link p-0">GEM Women's Hub</a></li>
+
                 </ul>
             </div>
 
