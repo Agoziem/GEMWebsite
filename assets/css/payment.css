@@ -1,0 +1,12 @@
+.Payment_Card {
+  position: relative;
+  z-index: 1000;
+}
+
+.payment_successful_card {
+  padding: 65px;
+  background: #FFFFFF;
+  box-shadow: 0px 12.57676px 40.6514px -3.1162px #18aee58e;
+  border-radius: 36px;
+}
+

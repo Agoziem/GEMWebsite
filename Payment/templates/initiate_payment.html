@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Initiate Payment {% endblock %}
+
+{% block content %}
+<section class="Arm">
+    <img class="Shield_Arm" src="{% static 'images/Shield 1.svg' %}" alt="">
+    <div class="container mb-5">
+        <div class="Arm_text">
+            <div class="d-flex  flex-column justify-content-center align-items-center mt-3">
+                <h1>Supports & Donations</h1>
+                <div class="rule d-flex align-items-center">
+                    <div class="rule_blue my-4"></div>
+                    <div class="rule_ash my-4"></div>
+                </div>
+                <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+                    organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all
+                    things on
+                    earth like it is in heaven.
+                </p>
+            </div>
+            <!-- the Card for Payment -->
+            <div class="d-flex justify-content-center my-3">
+                <div class="Payment_Card row justify-content-center align-items-center "
+                    style="max-width: 800px;box-shadow: 0px 4px 52px 4px rgba(24, 173, 229, 0.22);border-radius: 20px 20px 20px 20px;">
+                    <div class="col-md ps-0 d-none d-md-block">
+                        <img src="{% static 'images/Payment.jpg' %}" alt=""
+                            style="width:100%;height: 500px; object-fit:cover;border-radius: 20px 0px 0px 20px;">
+                    </div>
+                    <div class="col-md">
+                        <div class="mt-4 d-flex flex-column align-items-center px-2 py-4 py-md-0">
+
+                            <!-- Alert after Submission  -->
+
+                            <div class="alert alert-danger alert-dismissible" style="display:none;">
+                                <i class="fa-solid fa-triangle-exclamation mx-2 text-danger h5"></i>
+                                <div>
+                                    An error occurred while sending your message.
+                                </div>
+                            </div>
+
+                            <form id="payment-form" method="POST" class="form" style="width: 280px;font-weight: 600; color: #052640;">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                    <input type="text" name="Name" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="enter your name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label"> Amount </label>
+                                    <input type="number" name="Amount" class="form-control"
+                                        id="exampleFormControlInput1" placeholder="enter Amount" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Payment Statement</label>
+                                    <input type="text" name="description" class="form-control"
+                                        id="exampleFormControlInput1" placeholder="" required>
+                                </div>
+                                <button id="submit" type="submit" class="btn btn-primary w-100 my-3 shadow-sm" style="display:block;">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

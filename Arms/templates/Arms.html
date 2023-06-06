@@ -4,7 +4,110 @@
 {% block title %}Gem Arms{% endblock %}
 
 {% block content %}
-    <h1>About Us</h1>
-    <p>We are a small company based in Django City, specializing in web development and design.</p>
-{% endblock %}
+<div id="Armcover" >
+    <div id="Armcovertext">
+        <div id="Armcover-text">
+            GEM ARMS
+        </div>
+    </div>
+    <div class="indicator-container mb-2"></div>
+</div>
 
+<!-- body -->
+<section class="Arm ">
+    <img class="Shield_Arm" src="{% static 'images/Shield 1.svg' %}" alt="">
+    <div class="container mb-5">
+        <div class="Arm_text">
+            <div class="d-flex  flex-column justify-content-center align-items-center mt-3">
+                <h1>Welcome to GEM ARMS</h1>
+                <div class="rule d-flex align-items-center">
+                    <div class="rule_blue my-4"></div>
+                    <div class="rule_ash my-4"></div>
+                </div>
+                <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+                    organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+                    earth like it is in heaven.
+                </p>
+            </div>
+            
+            <div>
+                <div class="row justify-content-evenly align-items-center mt-3 g-3">
+                    {% if arms %}
+                    {% for arm in arms %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="Project_card mx-2 Arm_card">
+                            <img class="Project_card_img" src="{{ arm.picture }}" alt="">
+                            <div class="Text_container d-flex flex-column justify-content-center align-items-center">
+                                <h4 class="p-2 pt-3">{{ arm.Arm }}</h4>
+                                <div class="Project_card_button">
+                                    <a href="{% url 'Arms:details' arm.Arm %}" class="btn btn-primary">Read more</a>
+                                </div>
+                            </div>     
+                            
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    // Array of image URLs
+    var imageUrls = [
+        'url("/static/images/Team Background.jpg")',
+        'url("/static/images/People_praying.jpg")',
+        'url("/static/images/istockphoto-514558113-612x612.jpg")',
+    ];
+
+    var currentIndex = 0;
+    var armCoverElement = document.getElementById('Armcover');
+    var indicatorContainer = document.querySelector('.indicator-container');
+    var indicators = [];
+
+    function createIndicators() {
+        for (var i = 0; i < imageUrls.length; i++) {
+            var indicator = document.createElement('span');
+            indicator.className = 'indicator';
+            indicator.addEventListener('click', function (index) {
+                return function () {
+                    currentIndex = index;
+                    changeBackground();
+                };
+            }(i));
+
+            indicators.push(indicator);
+            indicatorContainer.appendChild(indicator);
+        }
+    }
+    
+
+    function changeBackground() {
+        currentIndex = (currentIndex + 1) % imageUrls.length;
+        armCoverElement.style.backgroundImage = imageUrls[currentIndex];
+
+        // Update indicators
+        for (var i = 0; i < indicators.length; i++) {
+            if (i === currentIndex) {
+                indicators[i].classList.add('active');
+            } else {
+                indicators[i].classList.remove('active');
+            }
+        }
+    }
+
+    function initializeSlideshow() {
+        createIndicators();
+        changeBackground();
+
+        // Change background every 3 seconds (adjust as needed)
+        setInterval(changeBackground, 3000);
+    }
+
+    initializeSlideshow();
+</script>
+{% endblock %}

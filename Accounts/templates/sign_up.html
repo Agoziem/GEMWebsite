@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Sign up {% endblock %}
+
+{% block content %}
+<section class="my-5">
+    <div class="d-flex justify-content-center">
+        <h1>Sign up</h1>
+    </div>
+    <div class="d-flex justify-content-center my-3">
+        <div class=" Payment_Card row justify-content-center align-items-center " style="max-width: 800px;box-shadow: 0px 4px 52px 4px rgba(24, 173, 229, 0.22);border-radius: 20px 20px 20px 20px;">
+            <div class="col-md ps-0 d-none d-md-block">
+                <img src="{% static 'images/Payment.jpg' %}" alt="" style="width:100%;height: 500px; object-fit:cover;border-radius: 20px 0px 0px 20px;">
+            </div>
+            <div class="col-md">
+                <div class="mt-4 d-flex flex-column align-items-center px-2 py-4 py-md-0">
+    
+                    <!-- Alert after Submission  -->
+    
+                    <div class="alert alert-danger alert-dismissible" style="display:none;">
+                        <i class="fa-solid fa-triangle-exclamation mx-2 text-danger h5"></i>
+                        <div>
+                            An error occurred while sending your message.
+                        </div>
+                    </div>
+    
+                    <form id="contact-form" class="form" style="width: 280px;font-weight: 600; color: #052640;">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                            <input type="text" name="username" class="form-control" id="exampleFormControlInput1"
+                                placeholder="enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"> Password </label>
+                            <input type="password" name="password1" class="form-control" id="exampleFormControlInput1"
+                                placeholder="enter Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                            <input type="password" name="password2" class="form-control" id="exampleFormControlInput1"
+                                placeholder="re-enter your Password" required>
+                        </div>
+    
+                        <button id="submit-btn" class="btn btn-primary w-100 my-3 shadow-sm"
+                        style="display:block;">
+                            Sign up
+                        </button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

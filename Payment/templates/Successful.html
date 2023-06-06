@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Payment Successful {% endblock %}
+{% block content %}
+<section class="my-2 d-flex justify-content-center">
+    <div class="payment_successful_card my-3">
+        <div class="d-flex justify-content-center mb-4">
+            <img src="{% static 'images/checkmark.svg' %}" alt="">
+        </div>
+        <p>
+            You have Successfully Donated <span class="fw-bold">${{ payment.total_amount }}</span> to “GEM”
+        </p>
+        <a href="{% url 'home' %}" class="btn btn-primary w-100"> Back to Home page <i class="fa-sharp fa-solid fa-home ms-2 h5 text-light"></i></a>
+    </div>
+</section>
+{% endblock %}

@@ -1,13 +1,12 @@
 from django.db import models
 import secrets
-from .Paystack import Paystack
 
 class Donations_and_Support(models.Model):
     Name=models.CharField(max_length=300)
     Payment_description=models.CharField(max_length=300)
     ref=models.CharField(max_length=300)
     Email=models.CharField(max_length=300)
-    verified=models.BooleanField(default=False)
+    verified=models.BooleanField()
     total_amount=models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     Date_Created=models.DateTimeField(auto_now_add=True)
     
@@ -28,14 +27,5 @@ class Donations_and_Support(models.Model):
             
 
     def __str__(self):
-        return str(self.Name_of_student)
+        return str(self.Name)
 
-    def verify_payment(self):
-        paystack= Paystack()
-        status = paystack.verify_payment(self.ref)
-        if status:
-            self.verified = True
-            super().save()
-        if self.verified:
-            return True
-        return False

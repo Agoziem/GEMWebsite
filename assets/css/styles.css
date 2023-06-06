@@ -3,6 +3,7 @@
     --main-bg-color: #ffffff;
     --bg-Deep-Navy-Blue: #010141;
     --bg-dark-Deep-Navy-Blue: #01011B;
+    --blue: #18ADE5;
     --btn-primary: #18ADE5;
     --btn-primary2: #010141;
     --main-font-family: "Century Gothic", "League Spartan", sans-serif;
@@ -34,6 +35,19 @@ h1 {
     font-weight: 700;
     font-size: 45px;
 
+}
+
+.leading_text {
+    max-width: 400px;
+    text-align: center;
+}
+
+/* /////////////////////////// */
+
+/* Icons styling */
+.fa-brands,
+.fa-solid,.fas {
+    color: var(--btn-primary);
 }
 
 body {
@@ -75,6 +89,105 @@ main {
     color: #010141;
     font-weight: 600;
 }
+
+/* Hamburger Menu Button */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    position: fixed;
+    top: 67px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .menu.active {
+      left: 0;
+      top: 67px;
+    }
+  
+  /* The main Menu */
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 11px 22px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .menu ul li {
+    font-weight: 500;
+  }
+  
+  .menu ul li a {
+    display: block;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: var(--bg-wine-red);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* /////////////////////////////// */
+  /* Sub Menu  */
+  
+  .menu .sub-menu{
+      display: none;
+      background-color: var(--main-bg-color);
+      min-width: 200px;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .menu .sub-menu.active{
+      display: block;
+      margin-left: -5px;
+      min-width: 200px;
+    }
+  
+  .menu ul ul li a {
+    display: block;
+    padding: 8px  15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+  }
+  
+  /* /////////////////////////////// */
+  /* hamburger styling */
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 999;
+    padding-right: 10px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--blue);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* /////////////////////////////// */
 
 .footer {
     background-color: var(--bg-Deep-Navy-Blue);
@@ -141,10 +254,11 @@ main {
 .hero_section {
     position: relative;
 }
-.Ellipse{
+
+.Ellipse {
     position: absolute;
-    bottom:-50px;
-    left:50px;
+    bottom: -50px;
+    left: 50px;
 }
 
 .hero_section .row {
@@ -205,32 +319,44 @@ main {
     font-size: 1.1rem;
 }
 
-
+/* ///////////////////////////////// */
 
 /* About Styling */
-.rule {
-    width: 170px;
-    height: 11px;
+
+.rule_blue{
+    width: 12vw;
+    max-width: 120px;
+    height: 8px;
     background: #18ADE5;
 }
 
-.About{
+.rule_ash{
+    width: 12vw;
+    max-width: 96px;
+    height: 8px;
+    background: #c2c2c2;
+}
+
+.About {
     position: relative;
 }
 
-.Shield{
+.Shield1 {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -1000;
-    width: 300px;
+    width: 400px;
 }
 
-.About_container{
+.About_container {
     position: relative;
     z-index: 100;
 }
+
 .about-card {
+    position: relative;
+    z-index: 1000;
+    background-color: #fff;
     width: 100%;
     max-width: 350px;
     box-shadow: -2px 7px 28px 7px rgba(24, 173, 229, 0.1);
@@ -246,4 +372,211 @@ main {
     font-weight: 800;
     font-size: 25px;
     padding-bottom: 20px;
+}
+
+/* ////////////////////////// */
+
+.Arm_container {
+    position: relative;
+    background-image: url("../images/People_praying.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.Arm_container::before {
+    content: '';
+    position: absolute;
+    background-color: var(--bg-Deep-Navy-Blue);
+    opacity: 0.7;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Arm_container-text {
+    position: relative;
+    color: #fff;
+    font-style: normal;
+}
+
+/* /////////////////////// */
+
+/* Project */
+.Project_card {
+    width: 100%;
+    max-width: 340px;
+    padding: 0;
+    border-bottom: 11px solid var(--blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+}
+
+.Project_card_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.Project_card_text {
+    padding: 25px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.Project_card_button {
+    padding: 25px;
+    padding-top: 0;
+}
+
+/* Articles */
+.Articles {
+    position: relative;
+}
+
+.Ellipse1 {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 180px;
+    z-index: -100;
+}
+
+.Ellipse2 {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 180px;
+    z-index: -100;
+}
+
+.long_rule {
+    width: 100vw;
+    height: 3px;
+    background: #D9D9D9;
+}
+
+
+/* Event */
+.Event {
+    position: relative;
+}
+
+.Shield {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1000;
+    width: 350px;
+}
+
+/* ////////////////////////// */
+
+.Executive_container {
+    position: relative;
+    background-image: url("../images/Team Background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.Executive_container::before {
+    content: '';
+    position: absolute;
+    background-color: var(--bg-Deep-Navy-Blue);
+    opacity: 0.9;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Executive_container-text {
+    position: relative;
+    color: #fff;
+    font-style: normal;
+}
+
+.Staff_card {
+    width: 100%;
+    max-width: 340px;
+    padding: 0;
+    border-bottom: 11px solid var(--blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    color: var(--bg-Deep-Navy-Blue);
+}
+
+.Staff_card_img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.Staff_card_text {
+    padding: 25px;
+    padding-bottom: 10px;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: 600;
+}
+
+/* Gallery */
+.Gallery {
+    background-color: var(--bg-Deep-Navy-Blue);
+    color: #fff;
+}
+
+.Photogallery {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .7vw;
+}
+
+
+.Photogallery img {
+    height: 200px;
+    /* set the height of the images */
+    width: auto;
+    /* let the width adjust proportionally */
+    object-fit: cover;
+    /* maintain aspect ratio and crop to fill container */
+}
+
+@media (max-width:765px) {
+    .Photogallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:565px) {
+    .Photogallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Contact form */
+.Contact {
+    position: relative;
+}
+
+.Ellipsea {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 180px;
+
+}
+
+.Ellipseb {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 180px;
 }

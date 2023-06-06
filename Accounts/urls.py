@@ -3,7 +3,8 @@ from .views import *
 
 app_name = 'Accounts'
 urlpatterns = [
-	# path('',attendance_view , name='class_attendance'),
-	# path('mark_attendance/',mark_attendance, name='mark_attendance'),
-    # path('<str:classname>/post_attendance',post_attendance , name='post_attendance'),
-    ]
+    path('login/', login_view, name='login'),
+    path('signup/', signup_view, name='signup'),
+    path('logout/', logout_view, name='logout'),
+]
+

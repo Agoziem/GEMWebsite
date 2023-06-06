@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 
-def Arms_views(request):
+def Arms_view(request):
     arms=Arm.objects.order_by('-id')
     context={
         "arms":arms
@@ -13,4 +13,4 @@ def Arms_details_view(request,name):
     context={
         "arm":arm
     }
-    return render(request,"Arm_details.html",context)
+    return render(request,"Arms_details.html",context)

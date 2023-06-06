@@ -3,7 +3,7 @@ from .views import *
 
 app_name = 'Arms'
 urlpatterns = [
-	# path('',attendance_view , name='class_attendance'),
-	# path('mark_attendance/',mark_attendance, name='mark_attendance'),
+	path('', Arms_view , name='arms'),
+	path('<str:name>/details/',Arms_details_view, name='details'),
     # path('<str:classname>/post_attendance',post_attendance , name='post_attendance'),
     ]

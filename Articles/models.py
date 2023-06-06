@@ -24,6 +24,14 @@ class Articles(models.Model):
 	def __str__(self):
 		return str(self.title)
 	
+	@property
+	def picture(self):
+		try:
+			url= self.thumb.url
+		except:
+			url=""
+		return url
+	
 
 class Comment(models.Model):
 	Article=models.ForeignKey(Categorie,related_name="comments",on_delete=models.CASCADE)

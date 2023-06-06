@@ -3,62 +3,393 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <img class="Rectangle" src="{% static 'images/Bent Rectangle.png' %}" alt="">
-    <section class="hero_section px-5" style="height:100vh;"> 
-        <img class="Ellipse" src="{% static 'images/Ellipse.png' %}" alt="">
-        <div class="row justify-content-evenly align-items-center mt-5 mb-2">
-            <div class="col-lg d-flex justify-content-center">
-                <div class="hero_text_container">
-                    <div class="hero_text">
-                        <span class="text1">GET</span><br>
-                        <span class="text2">EQUIPPED</span><br>
-                        <span class="text3">MISSION <div class="small_rectangle1"></div><div class="small_rectangle2"></div></span><br>
-                    </div>
-                    <p class="text4 p-0"  style="font-size: 29px;">Equiping People , transforming the World</p>
-                    <a href="#Contact" class="btn btn-primary"> Contact us</a>  
-                </div>         
-            </div>
-            <div class="col-lg hero_image_container d-flex justify-content-center">
-                <img class="hero_image" src="{% static 'images/Hero Image.png' %}" alt="" style="width:100%;max-width: 500px;">
+<section class="hero_section px-5" style="height:100vh;">
+    <img class="Ellipse" src="{% static 'images/Ellipse.png' %}" alt="">
+    <div class="row justify-content-evenly align-items-center mt-5 mb-2">
+        <div class="col-lg d-flex justify-content-center">
+            <div class="hero_text_container">
+                <div class="hero_text">
+                    <span class="text1">GET</span><br>
+                    <span class="text2">EQUIPPED</span><br>
+                    <span class="text3">MISSION <div class="small_rectangle1"></div>
+                        <div class="small_rectangle2"></div>
+                    </span><br>
+                </div>
+                <p class="text4 p-0" style="font-size: 29px;">Equiping People , transforming the World</p>
+                <a href="#Contact" class="btn btn-primary"> Contact us</a>
             </div>
         </div>
-    </section>
+        <div class="col-lg hero_image_container d-flex justify-content-center">
+            <img class="hero_image" src="{% static 'images/Hero Image.png' %}" alt=""
+                style="width:100%;max-width: 500px;">
+        </div>
+    </div>
+</section>
 
-    <!-- About -->
-    <section class="About px-5 mb-5">
-        <img class="Shield" src="{% static 'images/Shield 1.svg' %}" alt="">
-        <div class="About_container d-flex justify-content-center align-items-center flex-column">
-            <div class="rule"></div>
-            <h1 class="my-2">Welcome to GEM</h1>
-            <p class="text-center" style="width: 333px;">
-                Here, anything is possible; 
-                Dreams come true and you can 
-                live a life better than you ever imagined.
-                You can live the Kingdom-life!
-            </p>
-            <div class="row justify-content-evenly align-items-center g-5 my-2">
-                <div class="col-md">
-                    <div class="about-card">
-                        <img src="{% static 'images/Vision.svg' %}" alt="">
-                        <div class="about_heading">Vision</div>
-                        <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on earth like it is in heaven.</div>
-                    </div>
+<!-- About -->
+<section class="About px-5 mb-5">
+    <img class="Shield1" src="{% static 'images/Shield 2.svg' %}" alt="">
+    <div class="About_container d-flex justify-content-center align-items-center flex-column">
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        <h1 class="my-2">Welcome to GEM</h1>
+        <p class="leading_text text-center">
+            Here, anything is possible;
+            Dreams come true and you can
+            live a life better than you ever imagined.
+            You can live the Kingdom-life!
+        </p>
+        <div class="row justify-content-evenly align-items-center g-5 my-2">
+            <div class="col-md">
+                <div class="about-card">
+                    <img src="{% static 'images/Vision.svg' %}" alt="">
+                    <div class="about_heading">Vision</div>
+                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations
+                        radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+                        earth like it is in heaven.</div>
                 </div>
-                <div class="col-md">
-                    <div class="about-card">
-                        <img src="{% static 'images/Mission.svg' %}" alt="">
-                        <div class="about_heading">Mission</div>
-                        <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on earth like it is in heaven.</div>
-                    </div>
+            </div>
+            <div class="col-md">
+                <div class="about-card">
+                    <img src="{% static 'images/Mission.svg' %}" alt="">
+                    <div class="about_heading">Mission</div>
+                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations
+                        radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+                        earth like it is in heaven.</div>
                 </div>
-                <div class="col-md">
-                    <div class="about-card">
-                        <img src="{% static 'images/GEM 2.svg' %}" alt="">
-                        <div class="about_heading">About</div>
-                        <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on earth like it is in heaven.</div>
-                    </div>
+            </div>
+            <div class="col-md">
+                <div class="about-card">
+                    <img src="{% static 'images/GEM 2.svg' %}" alt="">
+                    <div class="about_heading">About</div>
+                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations
+                        radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+                        earth like it is in heaven.</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="my-5 px-3 py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md">
+                <img src="{% static 'images/values.png' %}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md flex-column align-items-center ms-4">
+                <h1>Our Values</h1>
+                <div class="rule my-4"></div>
+                {% if GEM.values.all %}
+                {% for value in GEM.values.all %}
+                <div class="d-flex align-items-center mb-2">
+                    <div><i class="fa-sharp fa-solid fa-circle-check me-3 h4"></i></div>
+                    <p><span class="fw-bold">{{ value.Value_heading}}</span>: {{ value.Value}}</p>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GEM ARMS -->
+<section class="Arm_container my-5 px-3 py-5">
+    <div class="Arm_container-text container d-flex flex-column align-items-center">
+        <h1>GEM ARMS</h1>
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        
+        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+            earth like it is in heaven. </p>
+        <div>
+            {% if GEM.Arms.all %}
+            {% for Arm in GEM.Arms.all %}
+            <div class="d-flex align-items-center mb-3">
+                <div><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i></div>
+                <p class="mb-0">{{ Arm.Arm}}
+                </p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <a href="{% url 'Arms:arms' %}" class="btn btn-primary px-5">View GEM Arms</a>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="my-3 py-5">
+    <div class="container d-flex flex-column align-items-center">
+        <h1>GEM Projects</h1>
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+            earth like it is in heaven. </p>
+        <div class="row justify-content-evenly align-items-center mt-3 g-3">
+            {% if projects %}
+            {% for project in projects %}
+            <div class="col-md-6 col-lg-4">
+                <div class="Project_card mx-2">
+                    <img class="Project_card_img" src="{{ project.picture }}" alt="">
+                    <div class="Project_card_text">{{ project.description|truncatewords:25}}</div>
+                    <div class="Project_card_button">
+                        <button class="btn btn-primary"> Read more </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<div class="long_rule"></div>
+<!-- Articles -->
+<section class="Articles my-3 py-5">
+    <img class="Ellipse1" src="{% static 'images/Ellipse 2.png' %}" alt="">
+    <img class="Ellipse2" src="{% static 'images/Ellipse 2.png' %}" alt="">
+    <div class="container d-flex flex-column align-items-center">
+        <h1>Articles</h1>
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+            earth like it is in heaven. </p>
+        <div class="row justify-content-evenly align-items-center mt-3 g-3">
+            {% if articles %}
+            {% for article in articles %}
+            <div class="col-md-6 col-lg-4">
+                <div class="Project_card mx-2">
+                    <img class="Project_card_img" src="{{ article.thumb.url }}" alt="">
+                    <div class="Project_card_text">{{ article.body|safe|truncatewords:25}}</div>
+                    <div class="Project_card_button">
+                        <button class="btn btn-primary"> Read more </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <a href="#" class="btn btn-primary px-3 py-2 mt-4">Explore Articles</a>
+    </div>
+</section>
+
+<!-- Events -->
+<div class="long_rule"></div>
+<section class="Event my-3 py-5">
+    <img class="Shield" src="{% static 'images/Shield 1.svg' %}" alt="">
+    <div class="container">
+        <div class="row justify-content-evenly align-items-center mt-3">
+            <div class="col-md d-flex flex-column align-items-center">
+                {% if Main_event %}
+                {% for event in Main_event %}
+                <img src="{{ event.picture }}" alt="" style="width: 250px;">
+                <h4 class="mt-4">Join us on Zoom</h4>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="{% static 'images/Zoom.png' %}" alt="" style="height:60px;width: auto;">
+                    <div>
+                        <span class="fw-bold">Zoom ID:</span> {{ event.Zoom_ID }} <br>
+                        <span class="fw-bold">Password:</span> {{ event.Zoom_Password }}
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="col-md">
+                <h1>Upcoming Events</h1>
+                <div class="rule d-flex align-items-center">
+                    <div class="rule_blue my-4"></div>
+                    <div class="rule_ash my-4"></div>
+                </div>
+                {% if Main_event %}
+                {% for event in events %}
+                <div class="card mb-3" style="max-width: 540px; border: none; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ event.picture }}" class="img-fluid rounded-start" alt="..."
+                                style="max-width: 150px; height: auto;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title" style="font-weight: 600;">{{ event.Title }}</h4>
+                                <p class="card-text">{{ event.description|truncatewords:20}}</p>
+                                <p class="card-text"><small class="text-muted">{{ event.Day }} 
+                                    {{ event.Month}}</small>&nbsp&nbsp<span class="fw-bold" style="color:#18ADE5">
+                                        <i class="fa-solid fa-clock h5 me-1"></i> {{ event.Time }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GEM Executive -->
+<section class="Executive_container my-5 px-3 py-5">
+    <div class="Executive_container-text container d-flex flex-column align-items-center">
+        <h1>GEM Team</h1>
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+            earth like it is in heaven.
+        </p>
+        <div class="row justify-content-evenly align-items-center g-5">
+            {% if Staffs %}
+            {% for Staff in Staffs %}
+            <div class="col-md-6 col-lg-4">
+                <div class="Staff_card mx-2">
+                    <img class="Staff_card_img" src="{{ Staff.picture }}" alt="">
+                    <div class="Staff_card_text text-center" >{{ Staff.Name }} <br>
+                        <span class="text-center text-muted small fw-normal">{{ Staff.Responsibility }}</span>
+                    </div>
+                    <div class="d-flex justify-content-center mt-0 mb-2">
+                       <span>
+                            <a class="me-2" href="#"><i class="fa-brands fa-facebook" style="font-size: 22px;"></i></a>
+                    
+                            <a class="me-2" href="#"><i class="fa-brands fa-instagram"
+                                         style="font-size: 22px;"></i></a>
+                             <a class="me-2" href="#"><i class="fa-brands fa-whatsapp"
+                                         style="font-size: 22px;"></i></a>
+                             <a class="" href="#"><i class="fa-brands fa-twitter"
+                                         style="font-size: 22px;"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Support -->
+<section class="Support my-5 px-3 py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md">
+                <img src="{% static 'images/Support.png' %}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md flex-column align-items-center ms-4">
+                <h1>GEM Foundation</h1>
+                <div class="rule my-4"></div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis labore, iste consequuntur exercitationem itaque numquam voluptatem unde reprehenderit ab quaerat repellendus odit. Nostrum recusandae itaque voluptates sunt, ratione quos esse molestiae magnam fuga. Adipisci, veritatis architecto. Laborum libero ullam laboriosam vel. Maxime earum error neque laudantium aliquam itaque facere?
+                </div>
+                <div class="d-flex align-items-center justify-content-evenly py-2 mt-2" style="border: #18ADE5 solid 2px; border-radius: 15px;">
+                    <div>
+                        to support and make Donations click the button 
+                    </div>
+                    <a href="{% url 'Payment:initiate' %}" class="btn btn-primary p-2 px-3"> Donate now </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GEM gallery -->
+<section class="Gallery my-5 px-3 py-5">
+    <div class="Gallery-text container d-flex flex-column align-items-center">
+        <h1>Activities on Frame</h1>
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+            earth like it is in heaven.
+        </p>
+        <div class="d-flex justify-content-center">
+            <div class="Photogallery">
+                {% if photos %}
+                {% for picture in photos %}
+                <img class="grid_img img-fluid" src="{{ picture.picture }}" alt="">
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+        <a href="#" class=" btn btn-primary mt-3">
+            see more Pictures
+        </a>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="Contact my-5 px-3 py-5">
+    <img class="Ellipsea" src="{% static 'images/Ellipse 2.png' %}" alt="">
+    <img class="Ellipseb" src="{% static 'images/Ellipse 2.png' %}" alt="">
+    <div class="container mt-3">
+        <div class="d-flex flex-column align-items-center mb-4">
+            <h1>Contact Us</h1>
+            <div class="rule d-flex align-items-center">
+                <div class="rule_blue my-4"></div>
+                <div class="rule_ash my-4"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md">
+                <div class="mt-4 d-flex flex-column align-items-center px-2">
+
+                    <!-- Alert after Submission  -->
+
+                    <div class="alert alert-success alert-dismissible" style="display: none;">
+                        <i class="bi bi-check-circle-fill mx-2 text-success h5"></i>
+                        <div>
+                            Your message has been sent successfully!
+                        </div>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible" style="display:none;">
+                        <i class="fa-solid fa-triangle-exclamation mx-2 text-danger h5"></i>
+                        <div>
+                            An error occurred while sending your message.
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="form" style="width: 280px;font-weight: 600; color: #052640;">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                            <input type="text" name="Name" class="form-control" id="exampleFormControlInput1"
+                                placeholder="enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                            <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="6"
+                                required></textarea>
+                        </div>
+                        <button id="submit-btn" type="submit" class="btn btn-primary w-100 mb-2 shadow-sm"
+                            style="display:block;"> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class='col-md d-flex flex-column align-items-center mt-4 mt-md-0'>
+                <div id='map' style='width: 100%; height: 500px;' class="shadow-sm"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}
-

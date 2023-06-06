@@ -20,3 +20,21 @@ function scrollFunction() {
 //   document.body.scrollTop = 0; // For Safari
 //   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 // }
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menu = document.querySelector('.menu');
+const menuLinks = document.querySelectorAll('.menulink');
+
+// Toggle Hamburger Menu
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active');
+  menu.classList.toggle('active');
+});
+
+// Close Hamburger Menu on Link Click
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerMenu.classList.remove('active');
+    menu.classList.remove('active');
+  });
+});

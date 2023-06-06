@@ -4,7 +4,87 @@
 {% block title %}Gem Arms{% endblock %}
 
 {% block content %}
-    <h1>About Us</h1>
-    <p>We are a small company based in Django City, specializing in web development and design.</p>
-{% endblock %}
+<div id="Armdetailcover">
+    <div id="Armdetailcovertext">
+        <div id="Armdetailcover-text">
+            {{ arm.Arm }}
+        </div>
+    </div>
+</div>
+<div class="container d-flex flex-column align-items-center">
+    <h1 class="mt-2">Welcome to {{ arm.Arm }}</h1>
+    <div class="rule d-flex align-items-center justify-content-center mb-4">
+        <div class="rule_blue"></div>
+        <div class="rule_ash"></div>
+    </div>
+    <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
+        organizations radiating the glory of God
+    </p>
 
+    <!-- Vision, Mission and Task -->
+    <div class="row justify-content-evenly my-5">
+        <div class="col-md">
+            <img src="{% static 'images/values.png' %}" alt="" class="img-fluid">
+        </div>
+        <div class="col-md ms-4">
+            <div class="p-4" style="border: 2px solid #ccc; border-radius: 10px;">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, ipsa architecto quibusdam voluptates
+                quaerat pariatur itaque nobis molestias iste, illo incidunt necessitatibus voluptas eum autem magni quis
+                delectus eligendi esse enim aliquam sunt ipsum! Commodi modi perferendis recusandae quisquam et
+                consequatur exercitationem architecto vero eaque provident? Assumenda nobis reprehenderit aliquid.
+            </div>
+            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
+                <div>
+                    <h4 class="fw-bold"> Vision </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error fugiat quasi recusandae veniam
+                        minima
+                        asperiores?
+                    </p>
+                </div>
+                <div>
+                    <h4 class="fw-bold"> Mission </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error fugiat quasi recusandae veniam
+                        minima
+                        asperiores?
+                    </p>
+                </div>
+                <div>
+                    <h4 class="fw-bold"> Task </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error fugiat quasi recusandae veniam
+                        minima
+                        asperiores?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="long_rule"></div>
+
+    <div class="row justify-content-evenly my-5">
+        <div class="col-md">
+            <img src="{% static 'images/Man Praying.jpg' %}" alt="" class="img-fluid">
+        </div>
+        <div class="col-md ms-4">
+            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #10e022; border-radius: 20px;">
+                <div>
+                    <h4 class="fw-bold"> Goal — Be Strong & Shine.
+                    </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error fugiat quasi recusandae veniam
+                    </p>
+                    <ul>
+                        <li>Spirit: Built for intimacy, glory and dominion</li>
+                        <li>Soul: Emotional, mental, and will-power development.</li>
+                        <li>Body: Health, Fitness, & Beauty.</li>
+                        <li>Life-Path: Purpose, vision, mission, goals, career & legacy.</li>
+                        <li>Life-Style: Philosophy, Principles, Time Appropriation.</li>
+                        <li>Relationship: Family, Friendship, Partnership (Civil, business, and life partner).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

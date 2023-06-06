@@ -9,10 +9,18 @@ class Arm(models.Model):
 	sideline=models.CharField(max_length=300,blank=False)
 	Vision=models.TextField(max_length=400,blank=False, help_text="max of 400 words")
 	Mission=models.TextField(max_length=400,blank=True, help_text="max of 400 words")
-
-    
+	
+	
 	def __str__(self):
-	    return str(self.Arm)
+		return str(self.Arm)
+	    
+	@property
+	def picture(self):
+		try:
+			url= self.Arm_image.url
+		except:
+			url=""
+		return url
 	
 class Arm_detail(models.Model):
 	Arm_name=models.ForeignKey(Arm,related_name="details",on_delete=models.CASCADE)
