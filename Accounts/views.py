@@ -9,7 +9,6 @@ def login_view(request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
-        
         if user is not None:
             login(request, user)
             return redirect('home')  # Replace 'home' with the name of your desired homepage URL
@@ -23,6 +22,7 @@ def signup_view(request):
         username = request.POST['username']
         password = request.POST['password2']
         email = request.POST['email']
+        print( request.POST)
         try:
             User.objects.get(username=username)
             messages.error(request, 'Username is already taken.')

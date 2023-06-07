@@ -33,14 +33,21 @@
 
                             <!-- Alert after Submission  -->
 
-                            <div class="alert alert-danger alert-dismissible">
+                            {% if messages %}
+                            {% for message in messages %}
+                            <div class="alert alert-danger alert-dismissible d-flex">
                                 <i class="fa-solid fa-triangle-exclamation mx-2 text-danger h5"></i>
                                 <div>
                                     {{ message }}
                                 </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
                             </div>
+                            {% endfor %}
+                            {% endif %}
 
-                            <form id="payment-form" method="POST" class="form" style="width: 280px;font-weight: 600; color: #052640;">
+                            <form id="payment-form" method="POST" class="form"
+                                style="width: 280px;font-weight: 600; color: #052640;">
                                 {% csrf_token %}
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Name</label>
@@ -62,7 +69,8 @@
                                     <input type="text" name="description" class="form-control"
                                         id="exampleFormControlInput1" placeholder="enter a description" required>
                                 </div>
-                                <button id="submit" type="submit" class="btn btn-primary w-100 my-3 shadow-sm" style="display:block;">
+                                <button id="submit" type="submit" class="btn btn-primary w-100 my-3 shadow-sm"
+                                    style="display:block;">
                                     Submit
                                 </button>
                             </form>

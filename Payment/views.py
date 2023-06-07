@@ -2,10 +2,10 @@ from django.shortcuts import render,redirect
 from .models import *
 from django.urls import reverse
 from django.http import JsonResponse
-from django.conf import settings
-import stripe
+# from django.conf import settings
+# import stripe
 
-stripe.api_key = settings.STRIPE_SECRET_KEY
+# stripe.api_key = settings.STRIPE_SECRET_KEY
 # Create your views here.
 
 def initiate_payment(request):

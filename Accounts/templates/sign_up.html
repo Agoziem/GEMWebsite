@@ -16,17 +16,21 @@
             <div class="col-md">
                 <div class="mt-4 d-flex flex-column align-items-center px-2 py-4 py-md-0">
 
-                    <!-- Alert after Submission  -->
 
-                    <!-- <div class="alert alert-danger alert-dismissible d-flex">
-                        <i class="fa-solid fa-triangle-exclamation mx-2 me-3 text-danger h5"></i>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-danger alert-dismissible d-flex">
+                        <i class="fa-solid fa-triangle-exclamation mx-2 {{ message.tags }} h5"></i>
                         <div>
                             {{ message }}
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div> -->
+                    </div>
+                    {% endfor %}
+                    {% endif %}
 
-                    <form id="contact-form" class="form" style="width: 280px;font-weight: 600; color: #052640;">
+                    <form id="contact-form" class="form" style="width: 280px;font-weight: 600; color: #052640;"
+                        method="POST" action="{% url 'Accounts:signup' %}">
                         {% csrf_token %}
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Name</label>
