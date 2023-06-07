@@ -19,30 +19,40 @@
 
                     <!-- Alert after Submission  -->
 
-                    <div class="alert alert-danger alert-dismissible" style="display:none;">
-                        <i class="fa-solid fa-triangle-exclamation mx-2 text-danger h5"></i>
+                    <!-- <div class="alert alert-danger alert-dismissible d-flex">
+                        <i class="fa-solid fa-triangle-exclamation mx-2 me-3 text-danger h5"></i>
                         <div>
-                            An error occurred while sending your message.
+                            {{ message }}
                         </div>
-                    </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div> -->
 
                     <form method="POST" id="contact-form" class="form"
                         style="width: 280px;font-weight: 600; color: #052640;">
                         {% csrf_token %}
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Name</label>
-                            <input type="text" name="username" class="form-control" id="exampleFormControlInput1"
-                                placeholder="enter your name" required>
-                        </div>
-                        <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="password" name="password" class="form-control" id="exampleFormControlInput1"
-                                placeholder="enter your Password" required>
+                            <input type="text" name="username" class="form-control" id="exampleFormControlInput1"
+                                placeholder="enter your email Address" required>
                         </div>
-                        <button id="submit-btn" class="btn btn-primary w-100 my-3 shadow-sm" style="display:block;">
+
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" name="password" class="form-control"
+                                    id="exampleFormControlInput1" placeholder="enter your Password" required>
+                                <div class="input-group-text toggle-password">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="submit-btn" class="btn btn-primary w-100 my-4 shadow-sm" style="display:block;">
                             Log in
                         </button>
-                       <p class="fw-normal">Don't have an Account ? Then <a href="{% url 'Accounts:signup' %}" class="text-decoration-none">Sign up</a> to enjoy</p>  
+                        <p class="fw-normal">Don't have an Account ? Then <a href="{% url 'Accounts:signup' %}"
+                                class="text-decoration-none">Sign up</a> to enjoy</p>
                     </form>
                 </div>
             </div>
@@ -50,5 +60,17 @@
     </div>
 </section>
 
+<script>
+    const togglePassword1 = document.querySelector('.toggle-password');
+    const passwordInput = document.querySelector('input[name="password"]');
 
+    togglePassword1.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+
+        const eyeIcon = togglePassword1.querySelector('i.fa-solid');
+        eyeIcon.classList.toggle('fa-eye');
+        eyeIcon.classList.toggle('fa-eye-slash');
+    });
+</script>
 {% endblock %}

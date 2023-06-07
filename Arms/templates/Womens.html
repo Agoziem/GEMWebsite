@@ -7,13 +7,15 @@
 <div id="Armdetailcover">
     <div id="Armdetailcovertext">
         <div id="Armdetailcover-text">
-            {{ arm.Arm }}
-            
+            {{ arm.Arm }}    
         </div>
+        <p class="px-2" >
+            Empowering Women to Excel as Queens
+        </p>
     </div>
 </div>
 <div class="container d-flex flex-column align-items-center">
-    <h1 class="mt-2">Welcome to GEM {{ arm.Arm }}</h1>
+    <h1 class="mt-2 text-center text-md-start">Welcome to GEM {{ arm.Arm }}</h1>
     <div class="rule d-flex align-items-center justify-content-center mb-4">
         <div class="rule_blue"></div>
         <div class="rule_ash"></div>
@@ -24,10 +26,10 @@
 
     <!-- Vision, Mission and Task -->
     <div class="row justify-content-evenly my-5 mt-2 align-items-center">
-        <div class="col-md">
+        <div class="col-md d-flex justify-content-center">
             <img src="{{ arm.picture }}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
         </div>
-        <div class="col-md ps-5">
+        <div class="col-md ps-md-5 d-flex justify-content-center">
             <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
                 <div>
                     <h4 class="fw-bold"> Vision </h4>
@@ -57,10 +59,10 @@
     <div class="long_rule"></div>
 
     <div class="row justify-content-evenly my-5 align-items-center">
-        <div class="col-md">
+        <div class="col-md d-flex justify-content-center">
             <img src="{% static 'images/Man Praying.jpg' %}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
         </div>
-        <div class="col-md ms-4">
+        <div class="col-md ms-md-4 d-flex justify-content-center">
             <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #10e022; border-radius: 20px;">
                 <div>
                     <h4 class="fw-bold"> Goal — Maturity & Excellence

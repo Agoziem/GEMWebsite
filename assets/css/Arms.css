@@ -26,20 +26,19 @@
   position: relative;
   z-index: 1;
   top: 50%;
-  padding: 0 80px;
   transform: translateY(-50%);
-  text-align: center;
 }
 
 #Armcover-text {
   color: #fff;
   font-size: 55px;
   font-family: var(--main-font-family);
-  line-height: 49px;
+  line-height: 57px;
   font-weight: 700;
   font-style: normal;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   margin-bottom: 9px;
+  text-align: center;
 }
 
 .indicator-container {
@@ -94,7 +93,6 @@
   position: relative;
   z-index: 1;
   top: 50%;
-  padding: 0 80px;
   transform: translateY(-50%);
   text-align: center;
 }

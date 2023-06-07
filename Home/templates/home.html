@@ -6,7 +6,7 @@
 <section class="hero_section px-5" style="height:100vh;">
     <img class="Ellipse" src="{% static 'images/Ellipse.png' %}" alt="">
     <div class="row justify-content-evenly align-items-center mt-4 mt-md-5 mb-2">
-        <div class="col-lg d-flex justify-content-center">
+        <div class="col-lg ms-lg-3 d-flex justify-content-center">
             <div class="hero_text_container">
                 <div class="hero_text text-center text-lg-start">
                     <span class="text1">GET</span><br>
@@ -19,7 +19,7 @@
                 <div class="d-flex justify-content-center justify-content-lg-start">
                     <a href="#Contact" class="btn btn-primary"> Contact us</a>
                 </div>
-                
+
             </div>
         </div>
 
@@ -30,7 +30,7 @@
 </section>
 
 <!-- About -->
-<section class="About px-5">
+<section id="About" class="About px-5">
     <img class="Shield1" src="{% static 'images/Shield 2.svg' %}" alt="">
     <div class="About_container d-flex justify-content-center align-items-center flex-column">
         <div class="rule d-flex align-items-center">
@@ -77,13 +77,13 @@
 </section>
 
 <!-- Values -->
-<section class="my-5 px-3 py-5">
+<section class="my-5 py-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md">
                 <img src="{% static 'images/values.png' %}" alt="" style="width: 103.6vw;max-width: 108%;">
             </div>
-            <div class="col-md flex-column align-items-center ms-4 mt-5 mt-md-0">
+            <div class="col-md flex-column align-items-center ms-1 ms-md-5 mt-5 mt-md-0">
                 <h1>Our Values</h1>
                 <div class="rule my-4"></div>
                 {% if GEM.values.all %}
@@ -127,7 +127,7 @@
 </section>
 
 <!-- Projects -->
-<section class="my-3 py-5">
+<section id="Project" class="my-3 py-5">
     <div class="container d-flex flex-column align-items-center">
         <h1 class="mb-0">GEM Projects</h1>
         <div class="rule d-flex align-items-center">
@@ -143,9 +143,44 @@
             <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                 <div class="Project_card mx-2">
                     <img class="Project_card_img" src="{{ project.picture }}" alt="">
-                    <div class="Project_card_text">{{ project.description|truncatewords:25}}</div>
+                    <div class="Project_card_text">
+                        <h4 class="mb-2">{{ project.Title }}</h4>
+                        {{ project.description|truncatewords:15}}
+                    </div>
                     <div class="Project_card_button">
-                        <button class="btn btn-primary"> Read more </button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal{{ project.id }}">
+                            Read more
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal{{ project.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">{{ project.Title }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="mb-4">
+                                <img src="{{ project.picture }}" alt=""
+                                    style="width:100%;height: 250px;object-fit:cover;">
+                            </div>
+                            This is some placeholder content to show the scrolling behavior for modals. We use repeated
+                            line
+                            breaks to demonstrate how content can exceed minimum inner height, thereby showing inner
+                            scrolling.
+                            When content becomes longer than the predefined max-height of modal, content will be cropped
+                            and
+                            scrollable within the modal.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -190,7 +225,7 @@
 
 <!-- Events -->
 <div class="long_rule"></div>
-<section class="Event my-3 py-5">
+<section id="Event" class="Event my-3 py-5">
     <img class="Shield" src="{% static 'images/Shield 1.svg' %}" alt="">
     <div class="container">
         <div class="row justify-content-evenly align-items-center mt-3">
@@ -199,7 +234,7 @@
                 {% for event in Main_event %}
                 <a href="{{ event.picture }}" target="_blank">
                     <img src="{{ event.picture }}" alt="" style="width: 250px;" class="rounded shadow-sm">
-                </a>              
+                </a>
                 <h4 class="mt-4">Join us on Zoom</h4>
                 <div class="d-flex justify-content-center align-items-center">
                     <img src="{% static 'images/Zoom.png' %}" alt="" style="height:60px;width: auto;">
@@ -225,8 +260,8 @@
                         <div class="col-lg-4 d-none d-lg-block">
                             <a href="{{ event.picture }}" target="_blank">
                                 <img src="{{ event.picture }}" class=" img-fluid rounded-start" alt="..."
-                                style="max-width: 150px;height: 100%;">
-                            </a>                         
+                                    style="max-width: 150px;height: 100%;">
+                            </a>
                         </div>
                         <div class="col-md col-lg-8">
                             <div class="card-body">
@@ -400,5 +435,31 @@
         </div>
     </div>
 </section>
+
+<!-- Welcome message to Create an Account -->
+<div class="modal fade" id="LoginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Welcome on Board</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-3">
+                <h5 class="fw-bold">"Welcome to our GEM Nation!!</h5>
+                To stay updated with our latest events and articles, we invite you to log in or sign up. By creating an
+                account, you'll have access to exclusive content, personalized recommendations, and the ability to
+                interact with our community.
+                <br>
+                Join our vibrant community today and be part of the conversation. Don't miss out on exciting updates,
+                informative articles, and engaging discussions.
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'Accounts:login' %}" class="btn btn-secondary me-2">Login</a>
+                <a href="{% url 'Accounts:signup' %}" class="btn btn-primary"> Create an Account</a>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="{% static 'js/home.js' %}"></script>
 {% endblock %}

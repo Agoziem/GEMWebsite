@@ -33,10 +33,10 @@
 
                             <!-- Alert after Submission  -->
 
-                            <div class="alert alert-danger alert-dismissible" style="display:none;">
+                            <div class="alert alert-danger alert-dismissible">
                                 <i class="fa-solid fa-triangle-exclamation mx-2 text-danger h5"></i>
                                 <div>
-                                    An error occurred while sending your message.
+                                    {{ message }}
                                 </div>
                             </div>
 
@@ -58,9 +58,9 @@
                                         id="exampleFormControlInput1" placeholder="enter Amount" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Payment Statement</label>
+                                    <label for="exampleFormControlInput1" class="form-label">Payment Description</label>
                                     <input type="text" name="description" class="form-control"
-                                        id="exampleFormControlInput1" placeholder="" required>
+                                        id="exampleFormControlInput1" placeholder="enter a description" required>
                                 </div>
                                 <button id="submit" type="submit" class="btn btn-primary w-100 my-3 shadow-sm" style="display:block;">
                                     Submit

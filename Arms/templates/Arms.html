@@ -4,7 +4,7 @@
 {% block title %}Gem Arms{% endblock %}
 
 {% block content %}
-<div id="Armcover" >
+<div id="Armcover">
     <div id="Armcovertext">
         <div id="Armcover-text">
             GEM ARMS
@@ -16,23 +16,24 @@
 <!-- body -->
 <section class="Arm ">
     <img class="Shield_Arm" src="{% static 'images/Shield 1.svg' %}" alt="">
-    <div class="container mb-5">
+    <div class="container mb-5 mt-3">
         <div class="Arm_text">
             <div class="d-flex  flex-column justify-content-center align-items-center mt-3">
-                <h1>Welcome to GEM ARMS</h1>
+                <h1 class="text-center mb-0">Welcome to GEM ARMS</h1>
                 <div class="rule d-flex align-items-center">
                     <div class="rule_blue my-4"></div>
                     <div class="rule_ash my-4"></div>
                 </div>
                 <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
-                    organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
+                    organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all
+                    things on
                     earth like it is in heaven.
                 </p>
             </div>
-            
+
             <div>
                 <div class="row align-items-center mt-3 g-3">
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4  d-flex justify-content-center">
                         <div class="Project_card mx-2 Arm_card">
                             <img class="Project_card_img" src="{{ Bible_studies.picture }}" alt="">
                             <div class="Text_container d-flex flex-column justify-content-center align-items-center">
@@ -40,12 +41,12 @@
                                 <div class="Project_card_button">
                                     <a href="{% url 'Arms:Bible_Studies' %}" class="btn btn-primary">Read more</a>
                                 </div>
-                            </div>     
-                            
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="Project_card mx-2 Arm_card">
                             <img class="Project_card_img" src="{{ Revival_Prayers.picture }}" alt="">
                             <div class="Text_container d-flex flex-column justify-content-center align-items-center">
@@ -53,12 +54,12 @@
                                 <div class="Project_card_button">
                                     <a href="{% url 'Arms:Revival_Prayer' %}" class="btn btn-primary">Read more</a>
                                 </div>
-                            </div>     
-                            
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="Project_card mx-2 Arm_card">
                             <img class="Project_card_img" src="{{ Foundations.picture }}" alt="">
                             <div class="Text_container d-flex flex-column justify-content-center align-items-center">
@@ -66,12 +67,12 @@
                                 <div class="Project_card_button">
                                     <a href="{% url 'Arms:Foundations' %}" class="btn btn-primary">Read more</a>
                                 </div>
-                            </div>     
-                            
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="Project_card mx-2 Arm_card">
                             <img class="Project_card_img" src="{{ Women.picture }}" alt="">
                             <div class="Text_container d-flex flex-column justify-content-center align-items-center">
@@ -79,8 +80,7 @@
                                 <div class="Project_card_button">
                                     <a href="{% url 'Arms:Womens_Hub' %}" class="btn btn-primary">Read more</a>
                                 </div>
-                            </div>     
-                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
             indicatorContainer.appendChild(indicator);
         }
     }
-    
+
 
     function changeBackground() {
         currentIndex = (currentIndex + 1) % imageUrls.length;

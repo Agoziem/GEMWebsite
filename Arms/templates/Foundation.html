@@ -9,13 +9,13 @@
         <div id="Armdetailcover-text">
             {{ arm.Arm }}
         </div>
-        <p>
+        <p class="px-2">
             Loving People, Developing Society.
         </p>
     </div>
 </div>
 <div class="container d-flex flex-column align-items-center">
-    <h1 class="mt-2">Welcome to GEM {{ arm.Arm }}</h1>
+    <h1 class="mt-2 text-center text-md-start">Welcome to GEM {{ arm.Arm }}</h1>
     <div class="rule d-flex align-items-center justify-content-center mb-4">
         <div class="rule_blue"></div>
         <div class="rule_ash"></div>
@@ -26,52 +26,57 @@
 
     <!-- Vision, Mission and Task -->
     <div class="row justify-content-evenly my-2 mb-5 align-items-center">
-        <div class="col-md">
+        <div class="col-md d-flex justify-content-center">
             <img src="{{ arm.picture }}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
         </div>
-        <div class="col-md ms-4">
-            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #ff0000; border-radius: 20px;">
-                <div>
-                    <h4 class="fw-bold"> Vision </h4>
-                    <span class="display:block"><i>The Best Life for All</i></span>
-                    <p>To see people become their best, and to see society thrive at its best
-                    </p>
+        <div class="col-md ms-md-4 d-flex justify-content-center">
+            <div>
+                <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #ff0000; border-radius: 20px;">
+                    <div>
+                        <h4 class="fw-bold"> Vision </h4>
+                        <span class="display:block"><i>The Best Life for All</i></span>
+                        <p>To see people become their best, and to see society thrive at its best
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold"> Mission </h4>
+                        <span class="display:block"><i>Revival and Restoration</i></span>
+                        <p>To make the world a better place by loving people and developing society.
+                        </p>
+                    </div>
+                    
                 </div>
-                <div>
-                    <h4 class="fw-bold"> Mission </h4>
-                    <span class="display:block"><i>Revival and Restoration</i></span>
-                    <p>To make the world a better place by loving people and developing society.
-                    </p>
+                <div class="p-4 mt-3" style="border: 2px solid #ccc; border-radius: 10px;">
+                    <h3 class="fw-bold"> For Support & Partnership </h3>
+                    You can Choose to support in Cash or Partner with us as a GEM Partner to reach out to as many Souls out there , in need of help and Charity.
+                    Pls Contact us on getequippedmission@gmail.com and for Donations , you can click the Button , to get started <a href="{% url 'Payment:initiate' %}" class="ms-3 btn btn-primary"> Donate Now </a>
                 </div>
-                
             </div>
-            <div class="p-4 mt-3" style="border: 2px solid #ccc; border-radius: 10px;">
-                <h3 class="fw-bold"> For Support & Partnership </h3>
-                You can Choose to support in Cash or Partner with us as a GEM Partner to reach out to as many Souls out there , in need of help and Charity.
-                Pls Contact us on getequippedmission@gmail.com and for Donations , you can click the Button , to get started <a href="{% url 'Payment:initiate' %}" class="ms-3 btn btn-primary"> Donate Now </a>
-            </div>
+
         </div>
 
     </div>
     <div class="long_rule"></div>
 
     <div class="row justify-content-evenly my-5">
-        <div class="col-md">
-            <h3 class="fw-bold text-center">Photo Speaks </h3>
-            <div class="row g-4">
-                <img class="col-md-6 img-fluid rounded " src="{% static 'images/Foundation1.jpeg' %}" alt="" style="height: 250px; object-fit:cover;" >
-                <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation2.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
-                <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation3.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
-                <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation4.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
-            </div>
-            <div class="d-flex justify-content-center mt-3">
-                <a href="{% url 'gallery' %}" class="btn btn-primary">View more Photos</a>
-            </div>
+        <div class="col-md d-flex justify-content-center">
+            <div>
+                <h3 class="fw-bold text-center">Photo Speaks </h3>
+                <div class="row g-4">
+                    <img class="col-md-6 img-fluid rounded " src="{% static 'images/Foundation1.jpeg' %}" alt="" style="height: 250px; object-fit:cover;" >
+                    <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation2.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                    <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation3.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                    <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation4.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                </div>
+                <div class="d-flex justify-content-center my-3">
+                    <a href="{% url 'gallery' %}" class="btn btn-primary">View more Photos</a>
+                </div>
+            </div>          
         </div>
 
 
-        <div class="col-md ps-0 ps-md-5">
-            <div class="bg-light px-5 py-4 shadow-sm" style="border-left: 5px solid #10e022; border-radius: 20px;">
+        <div class="col-md  ps-md-5 d-flex justify-content-center">
+            <div class="bg-light px-3 px-md-5 py-4 shadow-sm" style="border-left: 5px solid #10e022; border-radius: 20px;">
                 <div>
                     <h3 class="fw-bold mb-3"> What we do </h3>
                     <div class="d-flex justify-content-center">

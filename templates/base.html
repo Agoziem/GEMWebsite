@@ -102,7 +102,7 @@
                     </li>
 
                     <li class="nav-item me-2">
-                        <a href="#" class="nav-link">about</a>
+                        <a href="/#About" class="nav-link">about</a>
                     </li>
                     <!-- <li class="nav-item me-2">
                         <a href="{% url 'Arms:arms' %}" class="nav-link">Arms</a>
@@ -123,10 +123,10 @@
                     </li>
 
                     <li class="nav-item me-2">
-                        <a class="nav-link">projects</a>
+                        <a href="/#Project" class="nav-link">projects</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a href="#" class="nav-link">Articles & News</a>
+                        <a href="/#Event" class="nav-link">Upcoming Events</a>
                     </li>
                     <li class="nav-item me-2">
                         <a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
@@ -162,27 +162,27 @@
     <nav class="menu d-block d-lg-none">
         <ul>
             <li><a href="{% url 'home' %}" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i> Home</a></li>
-            <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>about</a></li>
+            <li><a href="/#About" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>about</a></li>
             <!-- <li><a href="{% url 'Arms:arms' %}" class="menulink"><i
                         class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Arms</a></li> -->
 
-            <li class="me-2 dropdown">
-                <a class="dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+            <li class="me-2 nav-item dropdown">
+                <a class="menulink" href="{% url 'Arms:arms' %}"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Arms</a>
+                <!-- <a class=" menulink dropdown-toggle" href="{% url 'Arms:arms' %}" id="navbarLightDropdownMenuLink" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>
                     Arms
-                </a>
-                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                    <li><a class="menulink dropdown-item" href="{% url 'Arms:arms' %}">Arms Page</a></li>
-                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Bible_Studies' %}">Bible Studies</a></li>
-                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Revival_Prayer' %}">Revival Prayers</a></li>
-                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Foundations' %}">Foundations</a></li>
-                    <li><a class="menulink dropdown-item" href="{% url 'Arms:Womens_Hub' %}">Women</a></li>
-                </ul>
+                </a> -->
+                <!-- <ul class="dropdown-menu dropdown-menu-light"  aria-labelledby="navbarLightDropdownMenuLink">
+                    <li><a class="dropdown-item" href="{% url 'Arms:arms' %}">Arms Page</a></li>
+                    <li><a class="dropdown-item" href="{% url 'Arms:Bible_Studies' %}">Bible Studies</a></li>
+                    <li><a class="dropdown-item" href="{% url 'Arms:Revival_Prayer' %}">Revival Prayers</a></li>
+                    <li><a class="dropdown-item" href="{% url 'Arms:Foundations' %}">Foundations</a></li>
+                    <li><a class="dropdown-item" href="{% url 'Arms:Womens_Hub' %}">Women</a></li>
+                </ul> -->
             </li>
-            <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Projects</a></li>
-            <li><a href="#" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Articles &
-                    News</a></li>
+            <li><a href="/#Project" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Projects</a></li>
+            <li><a href="/#Event" class="menulink"><i class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Upcoming Event</a></li>
             <li><a href="{% url 'gallery' %}" class="menulink"><i
                         class="fa-sharp fa-solid fa-circle-check me-3 h5"></i>Gallery</a></li>
             <li><a href="{% url 'Payment:initiate' %}" class="menulink"><i
@@ -253,8 +253,8 @@
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="{% url 'home' %}" class="nav-link p-0">Home</a></li>
                     <li class="nav-item mb-2"><a href="/#About" class="nav-link p-0">about</a></li>
-                    <li class="nav-item mb-2"><a href="/#Projects" class="nav-link p-0">Projects</a></li>
-                    <li class="nav-item mb-2"><a href="/#Articles" class="nav-link p-0">Articles & News</a></li>
+                    <li class="nav-item mb-2"><a href="/#Project" class="nav-link p-0">Projects</a></li>
+                    <li class="nav-item mb-2"><a href="/#Event" class="nav-link p-0">Upcoming Events</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'gallery' %}" class="nav-link p-0">Gallery</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'Payment:initiate' %}" class="nav-link p-0">Support</a></li>
                 </ul>
