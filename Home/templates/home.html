@@ -30,7 +30,7 @@
 </section>
 
 <!-- About -->
-<section id="About" class="About px-3 px-md-5">
+<section id="About" class="About px-5 px-md-5">
     <img class="Shield1" src="{% static 'images/Shield 2.svg' %}" alt="">
     <div class="About_container d-flex justify-content-center align-items-center flex-column">
         <div class="rule d-flex align-items-center">
@@ -44,7 +44,7 @@
             live a life better than you ever imagined.
             You can live the Kingdom-life!
         </p>
-        <div class="row align-items-center g-5 my-1">
+        <div class="row align-items-center g-5 my-1 ">
             <div class="col-md d-flex justify-content-center">
                 <div class="about-card" data-aos="fade-up" data-aos-delay="100">
                     <img src="{% static 'images/Vision.svg' %}" alt="">
@@ -77,11 +77,11 @@
 </section>
 
 <!-- Values -->
-<section class="my-5 py-5">
+<section class="my-5 py-5 px-3">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md">
-                <img src="{% static 'images/values.png' %}" alt="" style="width: 103.6vw;max-width: 108%;">
+                <img src="{% static 'images/values.png' %}" alt="" style="width: 101.6vw;max-width: 98%;">
             </div>
             <div class="col-md flex-column align-items-center ms-1 ms-md-5 mt-5 mt-md-0">
                 <h1>Our Values</h1>
@@ -157,11 +157,11 @@
     </div>
 </section> -->
 
-<!-- Projects -->
-<section id="Project" class="Articles my-3 py-5">
+<!-- Project -->
+<section id="Project" class="Articles my-3 py-5 px-3">
     <img class="Ellipse1" src="{% static 'images/Ellipse 2.png' %}" alt="">
     <img class="Ellipse2" src="{% static 'images/Ellipse 2.png' %}" alt="">
-    <div class="container d-flex flex-column align-items-center">
+    <div class="d-flex flex-column align-items-center">
         <h1 class="mb-0">Projects</h1>
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
@@ -169,13 +169,14 @@
         </div>
         <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
             organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
-            earth like it is in heaven. </p>
+            earth like it is in heaven.
+        </p>
 
-        <div class="row justify-content-evenly align-items-center mt-3">
+        <div class="row align-items-center mt-3">
             {% if projects %}
             {% for project in projects %}
             <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-3 mb-md-0">
-                <div class="Project_card" data-aos="fade-left" data-aos-delay="100">
+                <div class="Project_card" data-aos="fade-up" data-aos-delay="100">
                     <img class="Project_card_img" src="{{ project.picture }}" alt="">
                     <div class="Project_card_text">
                         <h4 class="mb-2">{{ project.Title }}</h4>
@@ -230,7 +231,7 @@
 
 <!-- Events -->
 <div class="long_rule"></div>
-<section id="Event" class="Event my-3 py-5">
+<section id="Event" class="Event my-3 py-5 px-3">
     <img class="Shield" src="{% static 'images/Shield 1.svg' %}" alt="">
     <div class="container">
         {% if events %}

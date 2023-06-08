@@ -5,49 +5,35 @@
 
 {% block content %}
 
-<section class="mb-4 container">
-    <div class="lightBox">
-        <div class="lightBox_content">
-            <i class="fa-solid fa-times close"></i>
-            <div class="showImg">
-                <div class="image">
-                    <img src="images/img1.jpg" alt="">
+<section id="section" class="mb-4">
+    <h1>GEM Images</h1>
+    <div class=" d-flex justify-content-center">
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+    </div>
+    <div class="lightbox">
+        <div class="wrapper">
+            <header>
+                <div class="details">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Image Preview</span>
                 </div>
+                <div class="buttons"><i class="close-icon fa-solid fa-times"></i></div>
+            </header>
+            <div class="preview-img">
+                <div class="img"><img src="" alt="preview-img"></div>
             </div>
         </div>
     </div>
-
-    <div class="image-gallery">
-        <header>
-            <h1 class="mb-0">Photogallery</h1>
-            <div class="d-flex justify-content-center">
-                <div class="rule d-flex align-items-center">
-                    <div class="rule_blue my-4"></div>
-                    <div class="rule_ash my-4"></div>
-                </div>
-            </div>
-            
-        </header>
-
-        <div class="image-container">
+    <section class="gallery">
+        <ul class="images">
             {% for Picture in Pictures %}
-            <div class="image-box">
-                <img class="gImg" src="{{ Picture.picture }}" alt="">
-                <div class="logo_icons">
-                    <a href="#">
-                        <div class="text_content">
-                            <span class="name">GET EQUIPPED </span>
-                            <span class="followers">Mission(GEM)</span>
-                        </div>
-                    </a>
-                    <div class="icons">
-                        <a href="{{ Picture.picture }}" download><i class="fa-solid fa-arrow-down"></i></a>
-                    </div>
-                </div>
-            </div>
+            <li class="img"><img src="{{ Picture.picture }}" alt="img"></li>
             {% endfor %}
-        </div>
-    </div>
+        </ul>
+    </section>
     <div class="d-flex justify-content-center mt-2">
         <a href="{% url 'home' %}" class="btn btn-primary"><i class="fa-solid fa-share me-2 h6"
                 style="transform: scaleX(-1);color:white;"></i>back to Home page </a>
@@ -82,24 +68,29 @@
     </div> -->
 <!-- </section> -->
 
+
 <script>
 
-    let body = document.querySelector("body"),
-        lightBox = document.querySelector(".lightBox"),
-        img = document.querySelectorAll(".gImg"),
-        showImg = lightBox.querySelector(".showImg img"),
-        close = lightBox.querySelector(".close");
+    const allImages = document.querySelectorAll(".images .img");
+    const lightbox = document.querySelector(".lightbox");
+    const closeImgBtn = lightbox.querySelector(".close-icon");
 
-    for (let image of img) {
-        image.addEventListener("click", () => {
-            showImg.src = image.src;
-            lightBox.style.display = "flex";
-            body.style.overflow = "hidden";
-            close.onclick = () => {
-                lightBox.style.display = "none";
-                body.style.overflow = "visible";
-            };
-        });
+    allImages.forEach(img => {
+        // Calling showLightBox function with passing clicked img src as argument
+        img.addEventListener("click", () => showLightbox(img.querySelector("img").src));
+    });
+
+    const showLightbox = (img) => {
+        // Showing lightbox and updating img source
+        lightbox.querySelector("img").src = img;
+        lightbox.classList.add("show");
+        document.body.style.overflow = "hidden";
     }
+
+    closeImgBtn.addEventListener("click", () => {
+        // Hiding lightbox on close icon click
+        lightbox.classList.remove("show");
+        document.body.style.overflow = "auto";
+    });
 </script>
 {% endblock %}

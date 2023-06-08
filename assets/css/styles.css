@@ -537,7 +537,7 @@ main {
     }
 
     .hero_image {
-        width: 89.6vw;
+        width: 81.6vw;
         /* clamp(89.6vw, 200px, 960px) */
         max-width: 352.7px;
     }
@@ -657,6 +657,8 @@ main {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #fff;
 }
+
+
 
 .Project_card_img {
     width: 100%;
