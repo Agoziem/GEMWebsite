@@ -38,7 +38,7 @@ class Photo(models.Model):
 class Project(models.Model):
 	Title=models.CharField(max_length=300,blank=False)
 	Picture=models.ImageField( upload_to="assets/Projects", blank=False)
-	description=models.TextField(blank=False)
+	description=RichTextField(blank=False)
     
 	def __str__(self):
 		return str(self.Title)

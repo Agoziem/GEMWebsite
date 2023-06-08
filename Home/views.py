@@ -43,3 +43,24 @@ def photo_gallery_view(request):
 		"Pictures":Pictures
 	}
 	return render(request,'photogallery.html',context)
+
+def submit_contact_form(request):
+    data=json.loads(request.body)
+    contactname=data['userformdata']['name']
+    contactemail=data['userformdata']['email']
+    contactmessage=data['userformdata']['message']
+    contact_info=Contact.objects.create(
+        name=contactname,
+        email=contactemail,
+        message=contactmessage
+    )
+    contact_info.save()
+
+    return JsonResponse('submitted successfully',safe=False)
+
+def submit_sub_form(request):
+    data=json.loads(request.body)
+    subemail=data['userdata']['email']
+    sub_email=Subscription.objects.create(Email=subemail)
+    sub_email.save()
+    return JsonResponse('submitted successfully',safe=False)
