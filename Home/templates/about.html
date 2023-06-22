@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}about{% endblock %}
+{% block content %}
+<div id="Armdetailcover">
+    <div id="Armdetailcovertext">
+        <div id="Armdetailcover-text">
+           About GEM
+        </div>
+        <p class="px-2">
+            Empowering People to Grow in Christ & in the Kingdom
+        </p>
+    </div>
+</div>
+<!-- About info -->
+<section id="About" class="About px-5 px-md-5">
+    <img class="Shield1" src="{% static 'images/Shield 2.svg' %}" alt="">
+    <div class="About_container d-flex justify-content-center align-items-center flex-column">
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        <h1 class="my-2 text-center">Welcome to GEM</h1>
+        <p class="leading_text text-center">
+            Here, anything is possible;
+            Dreams come true, and you can
+            create a life better than you ever imagined.
+        </p>
+        <div class="row align-items-center g-5 my-1 ">
+            <div class="col-md d-flex justify-content-center">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="{% static 'images/GEM 2.svg' %}" alt="">
+                    <div class="about_heading">Who we are ?</div>
+                    <span class="fst-italic"
+                        style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">An Extension of God’s
+                        Kingdom </span>
+                    <div>We are an extension of God’s Kingdom, revealing the glory of God
+                        and advancing the Kingdom of God on earth just as it is in heaven.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md d-flex justify-content-center">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="{% static 'images/Mission.svg' %}" alt="">
+                    <div class="about_heading">Mission</div>
+                    <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
+                        …Equipping People, Transforming the World. </span>
+                    <div>Our Mission is revealing the Kingdom of God in its fullness, equipping people to live the
+                        Kingdom life, and transforming the world into a Kingdom domain.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md d-flex justify-content-center">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="{% static 'images/Vision.svg' %}" alt="">
+                    <div class="about_heading">Vision
+                    </div>
+                    <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
+                        A World Dominated by GEMS </span>
+                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations, and organizations
+                        revealing the glory of God and advancing the dominion of God in their sphere of influence.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="my-5 py-5 px-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md">
+                <img src="{% static 'images/values.png' %}" alt="" style="width: 101.6vw;max-width: 98%;">
+            </div>
+            <div class="col-md flex-column align-items-center ms-1 ms-md-5 mt-5 mt-md-0">
+                <h1>Our Values</h1>
+                <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:light; color: #010141;">
+                    Integrity, Empowerment, Excellence, Engagement.</span>
+                <div class="rule my-4"></div>
+                {% if GEM.values.all %}
+                {% for value in GEM.values.all %}
+                <div class="d-flex align-items-center mb-2" data-aos="zoom-in-left" data-aos-delay="300">
+                    <div><i class="fa-sharp fa-solid fa-circle-check me-3 h4"></i></div>
+                    <p><span class="fw-bold">{{ value.Value_heading}}</span>: {{ value.Value}}</p>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="long_rule"></div>
+<!-- Team Members -->
+<section class=" my-5 px-3 pb-5 pt-0">
+    <div class=" container d-flex flex-column align-items-center">
+        <h1>GEM Team</h1>
+        <div class="rule d-flex align-items-center">
+            <div class="rule_blue my-4"></div>
+            <div class="rule_ash my-4"></div>
+        </div>
+        <p class="leading_text">Meet the Team Members
+        </p>
+        <div class="row justify-content-evenly align-items-center g-5">
+            {% if Staffs %}
+            {% for Staff in Staffs %}
+            <div class="col-md-6 col-lg-4">
+                <div class="Staff_card mx-2" data-aos="fade-up" data-aos-delay="100">
+                    <img class="Staff_card_img" src="{{ Staff.picture }}" alt="">
+                    <div class="Staff_card_text text-center">{{ Staff.Name }} <br>
+                        <span class="text-center text-muted small fw-normal">{{ Staff.Responsibility }}</span>
+                    </div>
+                    <div class="d-flex justify-content-center mt-0 mb-2">
+                        <span>
+                            <a class="me-2" href="{{ Staff.facebook }}" target="_blank"><i class="fa-brands fa-facebook"
+                                    style="font-size: 22px;"></i></a>
+                            <a class="me-2" href="{{ Staff.instagram }}" target="_blank"><i
+                                    class="fa-brands fa-instagram" style="font-size: 22px;"></i></a>
+                            <a class="me-2" href="{{ Staff.whatsapp }}" target="_blank"><i class="fa-brands fa-whatsapp"
+                                    style="font-size: 22px;"></i></a>
+                            <a class="" href="{{ Staff.twitter }}" target="_blank"><i class="fa-brands fa-twitter"
+                                    style="font-size: 22px;"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+<script>
+    var armCoverbackground = document.getElementById('Armdetailcover');
+    armCoverbackground.style.backgroundImage = 'url("https://gemwebbucket.s3.amazonaws.com/static/images/360_F_325573400_vJOHbhpko6hGfu5upAc7sOyqAgdhE5K0.jpg")'
+</script>
+{% endblock %}

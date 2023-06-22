@@ -14,8 +14,9 @@ def initiate_payment(request):
 		email = request.POST['email']
 		Amount = request.POST['Amount']
 		description = request.POST['description']
+		Partnership_type = request.POST['Partnership_type']
 
-		payment=Donations_and_Support(Name=Name,Payment_description=description,Email=email,total_amount=Amount,verified=False)
+		payment=Donations_and_Support(Name=Name,Payment_description=description,Partnership_type=Partnership_type, Email=email,total_amount=Amount,verified=False)
 		payment.save()
 		context={
 			"Payment":payment

@@ -1,6 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
+
 class Organization_detail(models.Model):
 	name=models.CharField(max_length=300,blank=False)
 	Vision=models.TextField(blank=False)
@@ -70,9 +71,17 @@ class Staff(models.Model):
 		except:
 			url=""
 		return url
-	
 
+Arm_list=(
+	("Bible Studies","Bible Studies"),
+	("Revival Prayers","Revival Prayers"),
+	("Foundation","Foundation"),
+	("Women’s Hub","Women’s Hub"),
+	("Partners","Partners")
+	)
+		
 class Event(models.Model):
+	GEM_Arm=models.CharField(blank=False , default="None",choices=Arm_list,max_length=300)
 	Event_Flier=models.ImageField( upload_to="assets/Events", blank=False)
 	Title=models.CharField(max_length=300,blank=False)
 	description=models.TextField(blank=False, max_length=300 , help_text="max_lenght of 300")

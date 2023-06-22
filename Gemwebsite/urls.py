@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view, name='home'),
     path('gallery/', photo_gallery_view, name='gallery'),
-    # path('home/',home2_view, name='home'),
+    path('about/',about_view, name='about'),
     path('submit_contact_form/', submit_contact_form, name='submit_contact_form' ),
     path('submit_sub_form/', submit_sub_form, name='submit_sub_form' ),
     path('Articles/', include('Articles.urls')),

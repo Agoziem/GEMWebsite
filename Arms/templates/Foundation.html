@@ -21,7 +21,7 @@
         <div class="rule_ash"></div>
     </div>
     <p class="leading_text">
-        "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap. For with the measure you use, it will be measured to you." - Luke 6:38 (NIV)
+        We are on a mission to make the world a better place by loving people and developing society.
     </p>
 
     <!-- Vision, Mission and Task -->
@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <h4 class="fw-bold"> Mission </h4>
-                        <span class="display:block"><i>Revival and Restoration</i></span>
+                        <span class="display:block"><i>Loving People, Developing Society.</i></span>
                         <p>To make the world a better place by loving people and developing society.
                         </p>
                     </div>
@@ -52,7 +52,6 @@
                     Pls Contact us on getequippedmission@gmail.com and for Donations , you can click the Button , to get started <a href="{% url 'Payment:initiate' %}" class="ms-3 btn btn-primary"> Donate Now </a>
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -130,10 +129,153 @@
             </div>
         </div>
     </div>
+
+    <div class="long_rule"></div>
+
+    <!-- Testimonials -->
+    <section id="Project" class="Articles my-3 py-5 px-3">
+        <img class="Ellipse1" src="{% static 'images/Ellipse 2.png' %}" alt="">
+        <img class="Ellipse2" src="{% static 'images/Ellipse 2.png' %}" alt="">
+        <div class="d-flex flex-column align-items-center">
+            <h1 class="mb-0">Testimonials</h1>
+            <div class="rule d-flex align-items-center">
+                <div class="rule_blue my-4"></div>
+                <div class="rule_ash my-4"></div>
+            </div>
+            <p class="leading_text">We are on a mission to make the world a better place by loving people and developing
+                society.
+            </p>
+    
+            <div class="row align-items-center mt-3">
+                {% if first_three_Project %}
+                {% for project in first_three_Project %}
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-3 mb-md-0">
+                    <div class="Project_card" data-aos="fade-up" data-aos-delay="100">
+                        <img class="Project_card_img" src="{{ project.picture }}" alt="">
+                        <div class="Project_card_text">
+                            <h4 class="mb-2">{{ project.Title }}</h4>
+                            {{ project.description|safe|truncatewords:15}}
+                        </div>
+                        <div class="Project_card_button">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal{{ project.id }}">
+                                See More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal{{ project.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ project.Title }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+    
+                                <div class="mb-4">
+                                    <img src="{{ project.picture }}" alt=""
+                                        style="width:100%;height: 250px;object-fit:cover;">
+                                </div>
+                                {{ project.description|safe}}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center align-items-center"
+                        style="width: 80%; max-width: 500px; height: 250px; background-color: #1ab3edb3; color: white;">
+                        <h5>
+                            No Project Yet
+                        </h5>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        
+            <!-- for the Second Set -->
+            <div class="more_Project">
+                {% if second_three_Project %}
+                <div class="row align-items-center mt-5">
+                    {% for projectb in second_three_Project %}
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-3 mb-md-0">
+                        <div class="Project_card" data-aos="fade-up" data-aos-delay="100">
+                            <img class="Project_card_img" src="{{ projectb.picture }}" alt="">
+                            <div class="Project_card_text">
+                                <h4 class="mb-2">{{ projectb.Title }}</h4>
+                                {{ projectb.description|safe|truncatewords:15}}
+                            </div>
+                            <div class="Project_card_button">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal{{ projectb.id }}">
+                                    See More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal{{ projectb.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">{{ projectb.Title }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+        
+                                    <div class="mb-4">
+                                        <img src="{{ projectb.picture }}" alt=""
+                                            style="width:100%;height: 250px;object-fit:cover;">
+                                    </div>
+                                    {{ projectb.description|safe}}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+    
+            <!-- Show more buttons -->
+            <button id="show_more" class="btn btn-primary px-3 py-2 mt-4">Show more Projects</button>
+        </div>
+    </section>
 </div>
 
 <script>
     var armCoverbackground = document.getElementById('Armdetailcover');
     armCoverbackground.style.backgroundImage = 'url("https://gemwebbucket.s3.amazonaws.com/static/images/uk-giving.jpg")'
+    document.addEventListener("DOMContentLoaded", function () {
+        var showMoreButton = document.getElementById("show_more");
+        var moreProjectDiv = document.querySelector(".more_Project");
+
+        // Hide the more_Project div initially
+        moreProjectDiv.style.display = "none";
+
+        // Add click event listener to the show_more button
+        showMoreButton.addEventListener("click", function () {
+            if (moreProjectDiv.style.display === "none") {
+                // Show the more_Project div and change button text to "Show less"
+                moreProjectDiv.style.display = "block";
+                showMoreButton.textContent = "Show less";
+            } else {
+                // Hide the more_Project div and change button text to "Show more Projects"
+                moreProjectDiv.style.display = "none";
+                showMoreButton.textContent = "Show more Projects";
+            }
+        });
+    });
 </script>
 {% endblock %}

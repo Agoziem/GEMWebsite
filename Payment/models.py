@@ -1,11 +1,17 @@
 from django.db import models
 import secrets
 
+Partnership_type=(
+	("One Time","One Time"),
+	("Monthly Recurrent","Monthly Recurrent"),
+	)
+
 class Donations_and_Support(models.Model):
     Name=models.CharField(max_length=300)
     Payment_description=models.CharField(max_length=300)
     ref=models.CharField(max_length=300)
     Email=models.CharField(max_length=300)
+    Partnership_type=models.CharField(max_length=300 ,choices=Partnership_type,blank=False, default="None")
     verified=models.BooleanField()
     total_amount=models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     Date_Created=models.DateTimeField(auto_now_add=True)

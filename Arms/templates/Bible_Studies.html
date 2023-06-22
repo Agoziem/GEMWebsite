@@ -20,9 +20,9 @@
         <div class="rule_blue"></div>
         <div class="rule_ash"></div>
     </div>
-    <span class="display:block"><i> Greater Intimacy, Glory, & Dominion.</i></span>
+    <span class="text-center"><i>training for Greater Intimacy, Glory, & Dominion.</i></span>
     <p class="leading_text">
-        To see people live in greater intimacy with God,
+        Our Vision is to see people live in greater intimacy with God,
         expressing their full glory and dominion in the Kingdom of God.
     </p>
     <!-- Vision, Mission and Task -->
@@ -31,24 +31,15 @@
             <img src="{{ arm.picture }}" alt="" class="img-fluid img-thumbnail shadow-sm" style="border-radius: 20px;">
         </div>
         <div class="col-md ms-md-4 d-flex justify-content-center">
-            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
-                <div>
-                    <h4 class="fw-bold"> Mission</h4>
-                    <p>
-                    <div><i>Empowering People to Grow in Christ & in the Kingdom.</i></div>
-                    Equipping people with teachings and truth to grow in Christ and in the Kingdom of God.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="fw-bold"> Operational Goals </h4>
-                    <p>
-                    <ul>
-                        <li>Sunday Bible Study 3pm - 5pm</li>
-                        <li>Daily GEMS on IG - Pictures & videos, devotional, scriptures, inspiration</li>
-                        <li>Social media ads - advertising upcoming series. Ask people to register</li>
-                    </ul>
-                    </p>
+            <div class="bg-light p-4 my-3 shadow-sm row justify-content-center align-items-center" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
+                <div class="col-md d-flex justify-content-center">
+                    <img src="{{ Bible_studies_event.picture }}" alt="" class="img-fluid w-75 shadow-sm">
+                </div>      
+                <div class="col-md">
+                    <div class="text-center text-md-start mt-2 mt-md-0" style="font-size: 45px;font-weight: 600; margin-bottom: 0;">{{ Bible_studies_event.Time }}</div>
+                    <div class="text-center text-md-start" class="mb-2">( Est Toronto )</div>
+                    <div class="text-center text-md-start"><span class="fw-bold">Zoom id:</span> {{ Bible_studies_event.Zoom_ID }}</div>
+                    <div class="text-center text-md-start"><span class="fw-bold">Zoom Password:</span> {{ Bible_studies_event.Zoom_Password }}</div>
                 </div>
             </div>
 

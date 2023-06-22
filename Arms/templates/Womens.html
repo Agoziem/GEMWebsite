@@ -7,9 +7,9 @@
 <div id="Armdetailcover">
     <div id="Armdetailcovertext">
         <div id="Armdetailcover-text">
-            {{ arm.Arm }}    
+            {{ arm.Arm }}
         </div>
-        <p class="px-2" >
+        <p class="px-2">
             Empowering Women to Excel as Queens
         </p>
     </div>
@@ -20,8 +20,9 @@
         <div class="rule_blue"></div>
         <div class="rule_ash"></div>
     </div>
-    <p class="leading_text">Bring Freedom from stereotypes, shame, & lies. | Gain Confidence through developed character,
-        competence & community. | Live Fulfilled by exploring their God given passion & dreams.
+    <p class="leading_text">Our vision is to raise a nation of women leading with virtue and authority. To see women
+        live with character, competence, charisma, confidence, and community. We aim to empower women to excel in all
+        spheres of life
     </p>
 
     <!-- Vision, Mission and Task -->
@@ -30,44 +31,40 @@
             <img src="{{ arm.picture }}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
         </div>
         <div class="col-md ps-md-5 d-flex justify-content-center">
-            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
-                <div>
-                    <h4 class="fw-bold"> Vision </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error fugiat quasi recusandae veniam
-                        minima
-                        asperiores?
-                    </p>
-                </div>
-                <div>
-                    <h4 class="fw-bold"> Mission </h4>
-                    <p>To raise a nation of queens leading with virtue and authority.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="fw-bold"> Task </h4>
-                    <ul>
-                        <li>Bringing clarity to the identity and peculiarities of womanhood.</li>
-                        <li>Empowering women to live with character, competence, confidence, and community.</li>
-                        <li>Empowering women to excel in every area of their lives.</li>
-                        <li>Empowering women to excel in at least one of the seven spheres of society</li>
-                    </ul>
+            <div class="bg-light p-4 my-3 shadow-sm row justify-content-center align-items-center" style="border-left: 5px solid #290E0E; border-radius: 20px;">
+                <div class="col-md d-flex justify-content-center">
+                    <img src="{{ Women_event.picture }}" alt="" class="img-fluid w-75 shadow-sm">
+                </div>      
+                <div class="col-md">
+                    <div class="text-center text-md-start mt-2 mt-md-0" style="font-size: 45px;font-weight: 600; margin-bottom: 0;">{{ Women_event.Time }}</div>
+                    <div class="text-center text-md-start" class="mb-2">( Est Toronto )</div>
+                    <div class="text-center text-md-start"><span class="fw-bold">Zoom id:</span> {{ Women_event.Zoom_ID }}</div>
+                    <div class="text-center text-md-start"><span class="fw-bold">Zoom Password:</span> {{ Women_event.Zoom_Password }}</div>
                 </div>
             </div>
         </div>
-
     </div>
     <div class="long_rule"></div>
 
     <div class="row justify-content-evenly my-5 align-items-center">
         <div class="col-md d-flex justify-content-center">
-            <img src="{% static 'images/Man Praying.jpg' %}" alt="" class="img-fluid img-thumbnail rounded shadow-sm">
+            <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #18ADE5; border-radius: 20px;">
+                <h3 class="fw-bold"> Task </h3>
+                <ul>
+                    <li>Bringing clarity to the identity and peculiarities of womanhood.</li>
+                    <li>Empowering women to live with character, competence, confidence, and community.</li>
+                    <li>Empowering women to excel in every area of their lives.</li>
+                    <li>Empowering women to excel in at least one of the seven spheres of society</li>
+                </ul>
+            </div>
         </div>
         <div class="col-md ms-md-4 d-flex justify-content-center">
             <div class="bg-light p-4 my-3 shadow-sm" style="border-left: 5px solid #10e022; border-radius: 20px;">
                 <div>
-                    <h4 class="fw-bold"> Goal — Maturity & Excellence
-                    </h4>
-                    <p>Maturity (shine and reign) in the 7 spheres of life:
+                    <h3 class="fw-bold"> Goal — Maturity & Excellence in all Spheres
+
+                    </h3>
+                    <p>In the 7 spheres of life::
                     </p>
                     <ol>
                         <li>Spirit: Built for intimacy, glory and dominion</li>
@@ -78,7 +75,7 @@
                         <li>Relationship: Family, Social, Professional.</li>
                         <li>Resources: Stewardship, Management, and Finance.</li>
                     </ol>
-                    <p>Maturity (shine and reign) in at least one of the seven spheres of society:
+                    <p>In at least one of the seven spheres of society:
                     </p>
                     <ol>
                         <li>Faith</li>
@@ -99,6 +96,6 @@
 
 <script>
     var armCoverbackground = document.getElementById('Armdetailcover');
-    armCoverbackground.style.backgroundImage='url("https://gemwebbucket.s3.amazonaws.com/static/images/istockphoto-1333810621-612x612.jpg")'
+    armCoverbackground.style.backgroundImage = 'url("https://gemwebbucket.s3.amazonaws.com/static/images/istockphoto-1333810621-612x612.jpg")'
 </script>
 {% endblock %}

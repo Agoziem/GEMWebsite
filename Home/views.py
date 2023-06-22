@@ -13,8 +13,8 @@ import json
 
 def home_view(request):
 	queryset1=Organization_detail.objects.get(id=1)
-	queryset2=Project.objects.all()
-	# queryset3=Header.objects.all()
+	first_three_Project = Project.objects.all()[:3]
+	second_three_Project= Project.objects.all()[3:6]
 	queryset4=Staff.objects.all()
 	queryset5=Event.objects.order_by('-id')[:2]
 	Main_event=Event.objects.order_by('-id')[:1]
@@ -25,7 +25,8 @@ def home_view(request):
 	context= {
 	# 'mapbox_private_key':settings.MAPBOXGL_ACCESSTOKEN,
 	'GEM':queryset1,
-	'projects':queryset2,
+	'first_three_Project':first_three_Project,
+    "second_three_Project":second_three_Project,
 	# 'headers':queryset3,
 	'Staffs':queryset4,
 	"Main_event":Main_event,
@@ -43,6 +44,15 @@ def photo_gallery_view(request):
 		"Pictures":Pictures
 	}
 	return render(request,'photogallery.html',context)
+
+def about_view(request):
+	queryset1=Organization_detail.objects.get(id=1)
+	queryset4=Staff.objects.all()
+	context={
+		"GEM":queryset1,
+		"Staffs":queryset4
+	}
+	return render(request,'about.html',context)
 
 def submit_contact_form(request):
     data=json.loads(request.body)

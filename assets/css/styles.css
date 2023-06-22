@@ -30,7 +30,7 @@
 /* text styling */
 
 h1 {
-    font-family: 'Century Gothic','Jost',sans-serif;
+    font-family: 'Century Gothic', 'Jost', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: min(max(10vw, 35px), 45px);
@@ -54,7 +54,7 @@ h1 {
 
 body {
     background-color: var(--main-bg-color);
-    font-family: 'League Spartan','Jost',sans-serif;
+    font-family: 'League Spartan', 'Jost', sans-serif;
     color: #010141;
 }
 
@@ -208,7 +208,7 @@ main {
 .footer_link h5 {
     font-size: 18px;
     font-weight: bold;
-    font-family: 'Century Gothic','Jost',sans-serif;
+    font-family: 'Century Gothic', 'Jost', sans-serif;
 }
 
 .sub_footer {
@@ -228,13 +228,13 @@ main {
     .footer_link h5 {
         font-size: 18px;
         font-weight: bold;
-        font-family: 'Century Gothic','Jost',sans-serif;
+        font-family: 'Century Gothic', 'Jost', sans-serif;
     }
 
     .footer_link li .nav-link {
         font-size: 12px;
         font-weight: bold;
-        font-family: 'Century Gothic','League Spartan',sans-serif;
+        font-family: 'Century Gothic', 'League Spartan', sans-serif;
     }
 
     .sub_footer p {
@@ -308,7 +308,7 @@ main {
     color: #010141;
     font-weight: 700;
     font-style: normal;
-    font-family: 'Century Gothic','Jost',sans-serif;
+    font-family: 'Century Gothic', 'Jost', sans-serif;
 }
 
 .hero_text .text1 {
@@ -356,10 +356,30 @@ main {
     font-size: 1.1rem;
 }
 
+
+
 .hero_image {
-    width: 32.6vw;
-    max-width: 500px;
+    display: none;
+    width: 357px;
+    height: 435px;
+    margin: 18px;
+  }
+
+  .hero_image.active {
+    display: block;
+  }
+
+
+.hero_image_carousal_btn {
+    width: 40px;
+    height: 40px;
+    background-color: #18ADE5;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
 }
+
+
 
 /* for Rectangle for Screens below large Screen  */
 @media (max-width:992px) {
@@ -402,7 +422,7 @@ main {
         color: #010141;
         font-weight: 700;
         font-style: normal;
-        font-family: 'Century Gothic','Jost',sans-serif;
+        font-family: 'Century Gothic', 'Jost', sans-serif;
     }
 
     .hero_text .text1 {
@@ -451,9 +471,11 @@ main {
     }
 
     .hero_image {
-        width: 89.6vw;
-        max-width: 450.7px;
-    }
+        display: none;
+        width: 311px;
+        height: 371px;
+        margin: 18px;
+      }
 }
 
 @media (max-width:576px) {
@@ -485,7 +507,7 @@ main {
         color: #010141;
         font-weight: 700;
         font-style: normal;
-        font-family: 'Century Gothic','Jost',sans-serif;
+        font-family: 'Century Gothic', 'Jost', sans-serif;
     }
 
     .hero_text .text1 {
@@ -537,10 +559,11 @@ main {
     }
 
     .hero_image {
-        width: 81.6vw;
-        /* clamp(89.6vw, 200px, 960px) */
-        max-width: 352.7px;
-    }
+        display: none;
+        width: 262px;
+        height: 334px;
+        margin: 18px;
+      }
 
 }
 
@@ -567,13 +590,13 @@ main {
 
 .About {
     position: relative;
-    margin-top: calc(94.6vw - 282px);
+    margin-top: calc(94.6vw - 222px);
 }
 
 @media (min-width:768px) {
     .About {
         position: relative;
-        margin-top: 20vw;
+        margin-top: 39vw;
     }
 }
 
@@ -610,7 +633,7 @@ main {
 }
 
 .about_heading {
-    font-family: 'Century Gothic','Jost',sans-serif;
+    font-family: 'Century Gothic', 'Jost', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 25px;

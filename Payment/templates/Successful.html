@@ -4,10 +4,11 @@
 {% block content %}
 <style>
     .payment_successful_card {
-        padding: 65px;
+        padding: 87px 27px;
         background: #FFFFFF;
         box-shadow: 0px 12.57676px 40.6514px -3.1162px #18aee58e;
         border-radius: 36px;
+        max-width: 350px;
     }
 </style>
 <section class="my-2 d-flex justify-content-center">
@@ -18,8 +19,7 @@
         <p>
             You have Successfully Donated <span class="fw-bold">${{ payment.total_amount }}</span> to “GEM”
         </p>
-        <a href="{% url 'home' %}" class="btn btn-primary w-100"> Back to Home page <i
-                class="fa-sharp fa-solid fa-home ms-2 h5 text-light"></i></a>
+        <a href="{% url 'home' %}" class="btn btn-primary w-100"> Back to Home page <i class="fa-sharp fa-solid fa-home ms-2 h5 text-light"></i></a>
     </div>
 </section>
 {% endblock %}

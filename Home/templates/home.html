@@ -11,21 +11,40 @@
                 <div class="hero_text text-center text-lg-start">
                     <span class="text1" data-aos="fade-up">GET</span><br>
                     <span class="text2" data-aos="fade-up" data-aos-delay="100">EQUIPPED</span><br>
-                    <span class="text3" data-aos="fade-up" data-aos-delay="200">MISSION <div class="small_rectangle1"></div>
+                    <span class="text3" data-aos="fade-up" data-aos-delay="200">MISSION <div class="small_rectangle1">
+                        </div>
                         <div class="small_rectangle2"></div>
                     </span><br>
                 </div>
-                <p class="text4 p-0 text-center text-lg-start" data-aos="fade-up" data-aos-delay="300">Equiping People , transforming the World</p>
-                <div class="d-flex justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#Contact" class="btn btn-primary"> Contact us</a>
+                <p class="text4 p-0 text-center text-lg-start" data-aos="fade-up" data-aos-delay="300">Revealing the
+                    Kingdom, Equipping People, Transforming the World.</p>
+                <div class="d-flex justify-content-center justify-content-lg-start" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <a href="{% url 'Arms:arms' %}" class="btn btn-primary">Get started</a>
                 </div>
 
             </div>
         </div>
-
-        <div class="col-lg hero_image_container d-flex justify-content-center pt-4 pt-md-4 pt-lg-0">
-            <img class="hero_image" src="{% static 'images/Hero Image.png' %}" alt="">
+        <!-- Change the UI to a Sliding images of the Flier -->
+        <div class="col-lg  d-flex justify-content-center pt-4 pt-md-4 pt-lg-0">
+            <div class="hero_image_container ">
+                <div class="d-flex justify-content-center" style="padding: 16px;">
+                    <img class="hero_image active" src="{% static 'images/Women_Flier.png' %}" alt="">
+                    <img class="hero_image" src="{% static 'images/Bible_Studies_Flier.png' %}" alt="">
+                    <img class="hero_image" src="{% static 'images/Prayer_flier.png' %}" alt="">
+                </div>
+                <div class="d-flex mt-3 justify-content-center">
+                    <div class="hero_image_carousal_btn left d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-left" style="color: white;"></i>
+                    </div>
+                    <div class="hero_image_carousal_btn right d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right" style="color: white;"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- <img class="hero_image" src="{% static 'images/Hero Image.png' %}" alt=""> -->
         </div>
+        <!-- ////////////////////////////// -->
     </div>
 </section>
 
@@ -40,36 +59,43 @@
         <h1 class="my-2 text-center">Welcome to GEM</h1>
         <p class="leading_text text-center">
             Here, anything is possible;
-            Dreams come true and you can
-            live a life better than you ever imagined.
-            You can live the Kingdom-life!
+            Dreams come true, and you can
+            create a life better than you ever imagined.
         </p>
         <div class="row align-items-center g-5 my-1 ">
             <div class="col-md d-flex justify-content-center">
-                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="{% static 'images/Vision.svg' %}" alt="">
-                    <div class="about_heading">Vision</div>
-                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations
-                        radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
-                        earth like it is in heaven.</div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="{% static 'images/GEM 2.svg' %}" alt="">
+                    <div class="about_heading">Who we are ?</div>
+                    <span class="fst-italic"
+                        style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">An Extension of God’s
+                        Kingdom </span>
+                    <div>We are an extension of God’s Kingdom, revealing the glory of God
+                        and advancing the Kingdom of God on earth just as it is in heaven.
+                    </div>
                 </div>
             </div>
             <div class="col-md d-flex justify-content-center">
                 <div class="about-card" data-aos="fade-up" data-aos-delay="200">
                     <img src="{% static 'images/Mission.svg' %}" alt="">
                     <div class="about_heading">Mission</div>
-                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations
-                        radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
-                        earth like it is in heaven.</div>
+                    <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
+                        …Equipping People, Transforming the World. </span>
+                    <div>Our Mission is revealing the Kingdom of God in its fullness, equipping people to live the
+                        Kingdom life, and transforming the world into a Kingdom domain.
+                    </div>
                 </div>
             </div>
             <div class="col-md d-flex justify-content-center">
-                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="{% static 'images/GEM 2.svg' %}" alt="">
-                    <div class="about_heading">About</div>
-                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations and organizations
-                        radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
-                        earth like it is in heaven.</div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="{% static 'images/Vision.svg' %}" alt="">
+                    <div class="about_heading">Vision
+                    </div>
+                    <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
+                        A World Dominated by GEMS </span>
+                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations, and organizations
+                        revealing the glory of God and advancing the dominion of God in their sphere of influence.
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,14 +103,16 @@
 </section>
 
 <!-- Values -->
-<section class="my-5 py-5 px-3">
-    <div class="container">
+<section class="my-5 py-5 ">
+    <div class="container px-3">
         <div class="row justify-content-center">
             <div class="col-md">
                 <img src="{% static 'images/values.png' %}" alt="" style="width: 101.6vw;max-width: 98%;">
             </div>
             <div class="col-md flex-column align-items-center ms-1 ms-md-5 mt-5 mt-md-0">
                 <h1>Our Values</h1>
+                <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:light; color: #010141;">
+                    Integrity, Empowerment, Excellence, Engagement.</span>
                 <div class="rule my-4"></div>
                 {% if GEM.values.all %}
                 {% for value in GEM.values.all %}
@@ -108,9 +136,9 @@
             <div class="rule_ash my-4"></div>
         </div>
 
-        <p class="leading_text" data-aos="fade-up" data-aos-anchor-placement="center-bottom">Our vision is to see a
-            world dominated by GEMS. GEMS are people, nations and
-            organizations radiating the glory of God </p>
+        <p class="leading_text" data-aos="fade-up" data-aos-anchor-placement="center-bottom">Be a part of the GEM World
+            by joining any of the missions below.
+        </p>
         <div class="my-3">
             {% if GEM.Arms.all %}
             {% for Arm in GEM.Arms.all %}
@@ -126,6 +154,9 @@
         <a href="{% url 'Arms:arms' %}" class="btn btn-primary px-5">View GEM Arms</a>
     </div>
 </section>
+
+<!--  Bible Studies , Revival prayers, Womens Hub, Foundations & partners -->
+
 
 <!-- Articles -->
 <!-- <section id="Project" class="my-3 py-5">
@@ -158,23 +189,24 @@
 </section> -->
 
 <!-- Project -->
-<section id="Project" class="Articles my-3 py-5 px-3">
+<section id="Project" class="Articles my-3 py-5">
     <img class="Ellipse1" src="{% static 'images/Ellipse 2.png' %}" alt="">
     <img class="Ellipse2" src="{% static 'images/Ellipse 2.png' %}" alt="">
     <div class="d-flex flex-column align-items-center">
-        <h1 class="mb-0">Projects</h1>
+        <h1 class="mb-0">Testimonials</h1>
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
         </div>
-        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
-            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
-            earth like it is in heaven.
+        <p class="leading_text">We are on a mission to make the world a better place by loving people and developing
+            society.
         </p>
+    </div>
 
+    <div class="container px-3">
         <div class="row align-items-center mt-3">
-            {% if projects %}
-            {% for project in projects %}
+            {% if first_three_Project %}
+            {% for project in first_three_Project %}
             <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-3 mb-md-0">
                 <div class="Project_card" data-aos="fade-up" data-aos-delay="100">
                     <img class="Project_card_img" src="{{ project.picture }}" alt="">
@@ -185,7 +217,7 @@
                     <div class="Project_card_button">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#exampleModal{{ project.id }}">
-                            Read more
+                            See More
                         </button>
                     </div>
                 </div>
@@ -200,10 +232,9 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-
+    
                             <div class="mb-4">
-                                <img src="{{ project.picture }}" alt=""
-                                    style="width:100%;height: 250px;object-fit:cover;">
+                                <img src="{{ project.picture }}" alt="" style="width:100%;height: 250px;object-fit:cover;">
                             </div>
                             {{ project.description|safe}}
                         </div>
@@ -215,28 +246,81 @@
             </div>
             {% endfor %}
             {% else %}
-            <div class="d-flex justify-content-center">
-                <div class="d-flex justify-content-center align-items-center" style="width: 80%; max-width: 500px; height: 250px; background-color: #1ab3edb3; color: white;">
+            <div class="col-md d-flex justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center align-items-center"
+                    style="width: 80%; max-width: 500px; height: 250px; background-color: #1ab3edb3; color: white;">
                     <h5>
                         No Project Yet
-                    </h5> 
+                    </h5>
                 </div>
             </div>
             {% endif %}
         </div>
+    </div>
+    
 
-        <a href="#" class="btn btn-primary px-3 py-2 mt-4">Explore Articles</a>
+    <!-- for the Second Set -->
+    <div class="container more_Project">
+        {% if second_three_Project %}
+        <div class="row align-items-center mt-5">
+            {% for projectb in second_three_Project %}
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-3 mb-md-0">
+                <div class="Project_card" data-aos="fade-up" data-aos-delay="100">
+                    <img class="Project_card_img" src="{{ projectb.picture }}" alt="">
+                    <div class="Project_card_text">
+                        <h4 class="mb-2">{{ projectb.Title }}</h4>
+                        {{ projectb.description|safe|truncatewords:15}}
+                    </div>
+                    <div class="Project_card_button">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal{{ projectb.id }}">
+                            See More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal{{ projectb.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">{{ projectb.Title }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="mb-4">
+                                <img src="{{ projectb.picture }}" alt=""
+                                    style="width:100%;height: 250px;object-fit:cover;">
+                            </div>
+                            {{ projectb.description|safe}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Show more buttons -->
+    <div class="d-flex justify-content-center">
+        <button id="show_more" class="btn btn-primary px-3 py-2 mt-4">Show more Projects</button>
     </div>
 </section>
 
 <!-- Events -->
 <div class="long_rule"></div>
-<section id="Event" class="Event my-3 py-5 px-3">
+<section id="Event" class="Event my-3 py-5">
     <img class="Shield" src="{% static 'images/Shield 1.svg' %}" alt="">
-    <div class="container">
+    <div class="container px-3">
         {% if events %}
         <div class="row justify-content-evenly align-items-center mt-3">
-            <div class="col-md d-flex flex-column align-items-center">   
+            <div class="col-md d-flex flex-column align-items-center">
                 {% for event in Main_event %}
                 <a href="{{ event.picture }}" target="_blank">
                     <img src="{{ event.picture }}" alt="" style="width: 250px;" class="rounded shadow-sm">
@@ -285,10 +369,11 @@
         {% else %}
         <div class="d-flex justify-content-center">
             <h1 class="mb-3">Upcoming Events</h1>
-            <div class="d-flex justify-content-center align-items-center" style="width: 80%; max-width: 500px; height: 250px; background-color: #1ab3edb3; color: white;">
+            <div class="d-flex justify-content-center align-items-center"
+                style="width: 80%; max-width: 500px; height: 250px; background-color: #1ab3edb3; color: white;">
                 <h5>
                     No Event Yet
-                </h5> 
+                </h5>
             </div>
         </div>
         {% endif %}
@@ -296,22 +381,20 @@
 </section>
 
 <!-- GEM Executive -->
-<section class="Executive_container my-5 px-3 py-5">
-    <div class="Executive_container-text container d-flex flex-column align-items-center">
+<section class="Executive_container my-5 py-5">
+    <div class="Executive_container-text container d-flex flex-column align-items-center px-3">
         <h1>GEM Team</h1>
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
         </div>
-        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
-            organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all things on
-            earth like it is in heaven.
+        <p class="leading_text">Meet the Team Members
         </p>
-        <div class="row justify-content-evenly align-items-center g-5">
+        <div class="row justify-content-evenly align-items-center">
             {% if Staffs %}
             {% for Staff in Staffs %}
-            <div class="col-md-6 col-lg-4">
-                <div class="Staff_card mx-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+                <div class="Staff_card " data-aos="fade-up" data-aos-delay="100">
                     <img class="Staff_card_img" src="{{ Staff.picture }}" alt="">
                     <div class="Staff_card_text text-center">{{ Staff.Name }} <br>
                         <span class="text-center text-muted small fw-normal">{{ Staff.Responsibility }}</span>
@@ -337,21 +420,22 @@
 </section>
 
 <!-- Support -->
-<section class="Support my-5 px-3 py-5">
-    <div class="container">
+<section class="Support my-5 py-5">
+    <div class="container px-3">
         <div class="row justify-content-center">
             <div class="col-md">
                 <img src="{% static 'images/Support.png' %}" alt="" class="img-fluid">
             </div>
-            <div class="col-md flex-column align-items-center ms-4 pt-4">
-                <h1 class="text-center text-start-md">GEM Foundation</h1>
+            <div class="col-md flex-column align-items-center ms-0 ms-md-4 pt-4">
+                <h1 class="text-center text-start-md">GEM Partners</h1>
+                <!-- Transforming the World through Partnership. -->
                 <div class="rule my-4"></div>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis labore, iste consequuntur
-                    exercitationem itaque numquam voluptatem unde reprehenderit ab quaerat repellendus odit. Nostrum
-                    recusandae itaque voluptates sunt, ratione quos esse molestiae magnam fuga. Adipisci, veritatis
-                    architecto. Laborum libero ullam laboriosam vel. Maxime earum error neque laudantium aliquam itaque
-                    facere?
+                    Join us in this journey to see people’s lives changed and society transformed through collaborative
+                    efforts and partnership. We believe that we were all made to be agents of change whose legacy will
+                    shine like stars through eternity. Plant a seed today that will last forever. What you do for
+                    yourself may end with you, but what you do for others lives forever. Alone, you can do so much.
+                    Together, we can do much more. Let us work together!
                 </div>
                 <div class="d-flex align-items-center justify-content-evenly py-2 mt-3"
                     style="border: #18ADE5 solid 1.9px;border-radius: 15px;padding: 20px;">
@@ -366,8 +450,8 @@
 </section>
 
 <!-- GEM gallery -->
-<section class="Gallery my-5 px-3 py-5">
-    <div class="Gallery-text container d-flex flex-column align-items-center">
+<section class="Gallery my-5 py-5">
+    <div class="container Gallery-text  d-flex flex-column align-items-center px-3">
         <h1 class="text-center text-start-md">Activities on Frame</h1>
         <div class="rule d-flex align-items-center">
             <div class="rule_blue my-4"></div>
@@ -393,10 +477,10 @@
 </section>
 
 <!-- Contact -->
-<section class="Contact my-5 px-3 py-5">
+<section class="Contact my-5 py-5">
     <img class="Ellipsea" src="{% static 'images/Ellipse 2.png' %}" alt="">
     <img class="Ellipseb" src="{% static 'images/Ellipse 2.png' %}" alt="">
-    <div class="container mt-3">
+    <div class="container mt-3 px-3">
         <div class="d-flex flex-column align-items-center mb-4">
             <h1>Contact Us</h1>
             <div class="rule d-flex align-items-center">
@@ -478,5 +562,85 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var showMoreButton = document.getElementById("show_more");
+        var moreProjectDiv = document.querySelector(".more_Project");
+
+        // Hide the more_Project div initially
+        moreProjectDiv.style.display = "none";
+
+        // Add click event listener to the show_more button
+        showMoreButton.addEventListener("click", function () {
+            if (moreProjectDiv.style.display === "none") {
+                // Show the more_Project div and change button text to "Show less"
+                moreProjectDiv.style.display = "block";
+                showMoreButton.textContent = "Show less";
+            } else {
+                // Hide the more_Project div and change button text to "Show more Projects"
+                moreProjectDiv.style.display = "none";
+                showMoreButton.textContent = "Show more Projects";
+            }
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const carouselBtnLeft = document.querySelector(".hero_image_carousal_btn.left");
+        const carouselBtnRight = document.querySelector(".hero_image_carousal_btn.right");
+        const heroImages = document.querySelectorAll(".hero_image");
+        let currentIndex = 0;
+        let timer;
+
+        carouselBtnLeft.addEventListener("click", function () {
+            currentIndex = (currentIndex === 0) ? heroImages.length - 1 : currentIndex - 1;
+            updateCarousel();
+            resetTimer();
+        });
+
+        carouselBtnRight.addEventListener("click", function () {
+            currentIndex = (currentIndex === heroImages.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+            resetTimer();
+        });
+
+        function updateCarousel() {
+            heroImages.forEach(function (image, index) {
+                if (index === currentIndex) {
+                    image.classList.add("active");
+                    fadeIn(image);
+                } else {
+                    image.classList.remove("active");
+                }
+            });
+        }
+
+        function fadeIn(element) {
+            element.style.opacity = 0;
+            let opacity = 0;
+
+            const animation = setInterval(function () {
+                if (opacity < 1) {
+                    opacity += 0.1;
+                    element.style.opacity = opacity;
+                } else {
+                    clearInterval(animation);
+                }
+            }, 50);
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(function () {
+                currentIndex = (currentIndex === heroImages.length - 1) ? 0 : currentIndex + 1;
+                updateCarousel();
+            }, 5000); // Change the delay time (in milliseconds) here
+        }
+
+        // Start the timer initially
+        resetTimer();
+    });
+
+
+</script>
 <script src="{% static 'js/home.js' %}"></script>
 {% endblock %}
