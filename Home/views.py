@@ -13,15 +13,15 @@ import json
 
 def home_view(request):
 	queryset1=Organization_detail.objects.get(id=1)
-	first_three_Project = Project.objects.all()[:3]
-	second_three_Project= Project.objects.all()[3:6]
+	first_three_Project = Project.objects.order_by('-S_N')[:3]
+	second_three_Project= Project.objects.order_by('-S_N')[3:6]
 	queryset4=Staff.objects.all()
-	queryset5=Event.objects.order_by('-id')[:3]
-	Main_event=Event.objects.order_by('-id')[:1]
-	queryset6=Photo.objects.order_by('-id')[:6]
+	queryset5=Event.objects.order_by('-S_N')[:3]
+	Main_event=Event.objects.order_by('-S_N')[:1]
+	queryset6=Photo.objects.order_by('-S_N')[:6]
 	# queryset7=Teacher.objects.all()
 	# queryset8=ParentsReview.objects.all()
-	queryset9=Articles.objects.order_by('-id')[:3]
+	# queryset9=Articles.objects.order_by('S_N')[:3]
 	context= {
 	# 'mapbox_private_key':settings.MAPBOXGL_ACCESSTOKEN,
 	'GEM':queryset1,
@@ -34,7 +34,7 @@ def home_view(request):
 	'photos':queryset6,
 	# "Teachers":queryset7,
 	# "parentsreviews":queryset8,
-	"articles":queryset9
+	# "articles":queryset9
 	}
 	return render(request,'home.html',context)
 

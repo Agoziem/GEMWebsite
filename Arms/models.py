@@ -3,6 +3,7 @@ from Home.models import Organization_detail
 from ckeditor.fields import RichTextField
 
 class Arm(models.Model):
+	S_N = models.IntegerField(blank=False,default=1)
 	Organization_name=models.ForeignKey(Organization_detail,related_name="Arms",on_delete=models.CASCADE)
 	Arm_image=models.ImageField( upload_to="assets/Arms", blank=False)
 	Arm=models.CharField(max_length=300,blank=False)

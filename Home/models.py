@@ -12,6 +12,7 @@ class Organization_detail(models.Model):
 	    return str(self.name)
 
 class Value(models.Model):
+	S_N = models.IntegerField(blank=False,default=1)
 	Organization_name=models.ForeignKey(Organization_detail,related_name="values",on_delete=models.CASCADE,blank=False)
 	Value_heading=models.CharField(max_length=300,blank=False)
 	Value=models.CharField(max_length=300,blank=False)
@@ -21,6 +22,7 @@ class Value(models.Model):
 	
 
 class Photo(models.Model):
+	S_N = models.IntegerField(blank=False,default=1)
 	Picture=models.ImageField( upload_to="assets/Photogallery", blank=False)
 	description=models.CharField( blank=True , max_length=300)
 
@@ -37,6 +39,7 @@ class Photo(models.Model):
 
 
 class Project(models.Model):
+	S_N = models.IntegerField(blank=False,default=1)
 	Title=models.CharField(max_length=300,blank=False)
 	Picture=models.ImageField( upload_to="assets/Projects", blank=False)
 	description=RichTextField(blank=False)
@@ -54,6 +57,7 @@ class Project(models.Model):
 	
 	
 class Staff(models.Model):
+	S_N = models.IntegerField(blank=False,default=1)
 	Profileimage=models.ImageField( upload_to="assets/Profile", blank=False)
 	Name=models.CharField(max_length=300,blank=False)
 	Responsibility=models.CharField(max_length=300,blank=False)
@@ -82,6 +86,7 @@ Arm_list=(
 	)
 		
 class Event(models.Model):
+	S_N = models.IntegerField(blank=False,default=1)
 	GEM_Arm=models.CharField(blank=False , default="None",choices=Arm_list,max_length=300)
 	Event_Flier=models.ImageField( upload_to="assets/Events", blank=False)
 	Title=models.CharField(max_length=300,blank=False)
