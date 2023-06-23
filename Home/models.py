@@ -52,6 +52,7 @@ class Project(models.Model):
 			url=""
 		return url
 	
+	
 class Staff(models.Model):
 	Profileimage=models.ImageField( upload_to="assets/Profile", blank=False)
 	Name=models.CharField(max_length=300,blank=False)

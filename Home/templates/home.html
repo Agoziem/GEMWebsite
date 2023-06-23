@@ -393,8 +393,8 @@
         <div class="row justify-content-evenly align-items-center">
             {% if Staffs %}
             {% for Staff in Staffs %}
-            <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
-                <div class="Staff_card " data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-6 col-lg-4">
+                <div class="Staff_card mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="100">
                     <img class="Staff_card_img" src="{{ Staff.picture }}" alt="">
                     <div class="Staff_card_text text-center">{{ Staff.Name }} <br>
                         <span class="text-center text-muted small fw-normal">{{ Staff.Responsibility }}</span>

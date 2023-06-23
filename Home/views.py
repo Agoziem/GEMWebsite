@@ -16,7 +16,7 @@ def home_view(request):
 	first_three_Project = Project.objects.all()[:3]
 	second_three_Project= Project.objects.all()[3:6]
 	queryset4=Staff.objects.all()
-	queryset5=Event.objects.order_by('-id')[:2]
+	queryset5=Event.objects.order_by('-id')[:3]
 	Main_event=Event.objects.order_by('-id')[:1]
 	queryset6=Photo.objects.order_by('-id')[:6]
 	# queryset7=Teacher.objects.all()
