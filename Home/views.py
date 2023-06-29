@@ -47,7 +47,7 @@ def photo_gallery_view(request):
 
 def about_view(request):
 	queryset1=Organization_detail.objects.get(id=1)
-	queryset4=Staff.objects.all()
+	queryset4=Staff.objects.order_by('S_N')
 	context={
 		"GEM":queryset1,
 		"Staffs":queryset4
