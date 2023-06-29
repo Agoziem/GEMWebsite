@@ -169,7 +169,7 @@ STATIC_URL='https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN,AWS_LOCATION)
 MAPBOXGL_ACCESSTOKEN=config('MAPBOXGL_ACCESSTOKEN', default='')
 
 JAZZMIN_SETTINGS = {
-    # "site_logo": "images/St Marks Logo.png",
+    "site_logo": "images/GEM LOGO 3 Website Icon.png",
     "site_logo_classes": "img-circle",
     "login_logo": None,
     "copyright": "GEM Organization 2023",

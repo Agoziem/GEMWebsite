@@ -92,7 +92,7 @@ class Event(models.Model):
 	Title=models.CharField(max_length=300,blank=False)
 	description=models.TextField(blank=False, max_length=300 , help_text="max_lenght of 300")
 	Day=models.CharField(max_length=300,blank=False)
-	Month=models.CharField(max_length=300,blank=False)
+	Month=models.CharField(max_length=300,blank=True)
 	Time=models.CharField(max_length=300,blank=False)
 	Zoom_meeting=models.BooleanField(default=True, blank=False)
 	Zoom_ID=models.CharField(max_length=300,blank=False)

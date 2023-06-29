@@ -48,8 +48,8 @@
                 </div>
                 <div class="p-4 mt-3" style="border: 2px solid #ccc; border-radius: 10px;">
                     <h3 class="fw-bold"> For Support & Partnership </h3>
-                    You can Choose to support in Cash or Partner with us as a GEM Partner to reach out to as many Souls out there , in need of help and Charity.
-                    Pls Contact us on getequippedmission@gmail.com and for Donations , you can click the Button , to get started <a href="{% url 'Payment:initiate' %}" class="ms-3 btn btn-primary"> Donate Now </a>
+                    You can choose to support financially or partner with us through product and services to reach out to as many people out there in need of help and charity.
+                    Please contact us at getequippedmission@gmail.com. For donations, you can click the button to get started <a href="{% url 'Payment:initiate' %}" class="ms-3 btn btn-primary"> Donate Now </a>
                 </div>
             </div>
         </div>
@@ -60,12 +60,12 @@
     <div class="row justify-content-evenly my-5">
         <div class="col-md d-flex justify-content-center">
             <div>
-                <h3 class="fw-bold text-center">Photo Speaks </h3>
+                <h3 class="fw-bold text-center">Photo Speaks</h3>
                 <div class="row g-4">
                     <img class="col-md-6 img-fluid rounded " src="{% static 'images/Foundation1.jpeg' %}" alt="" style="height: 250px; object-fit:cover;" >
-                    <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation2.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
-                    <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation3.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
-                    <img class="col-md-6 img-fluid  rounded " src="{% static 'images/Foundation4.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                    <img class="col-md-6 img-fluid rounded " src="{% static 'images/Foundation2.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                    <img class="col-md-6 img-fluid rounded " src="{% static 'images/Foundation3.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
+                    <img class="col-md-6 img-fluid rounded " src="{% static 'images/Foundation4.jpeg' %}" alt="" style="height: 250px; object-fit:cover;">
                 </div>
                 <div class="d-flex justify-content-center my-3">
                     <a href="{% url 'gallery' %}" class="btn btn-primary">View more Photos</a>
@@ -146,62 +146,65 @@
                 society.
             </p>
     
-            <div class="row align-items-center mt-3">
-                {% if first_three_Project %}
-                {% for project in first_three_Project %}
-                <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-3 mb-md-0">
-                    <div class="Project_card" data-aos="fade-up" data-aos-delay="100">
-                        <img class="Project_card_img" src="{{ project.picture }}" alt="">
-                        <div class="Project_card_text">
-                            <h4 class="mb-2">{{ project.Title }}</h4>
-                            {{ project.description|safe|truncatewords:15}}
-                        </div>
-                        <div class="Project_card_button">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal{{ project.id }}">
-                                See More
-                            </button>
+            <div class="container px-3">
+                <div class="row align-items-center mt-3">
+                    {% if first_three_Project %}
+                    {% for project in first_three_Project %}
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-3 mb-md-0">
+                        <div class="Project_card" data-aos="fade-up" data-aos-delay="100">
+                            <img class="Project_card_img" src="{{ project.picture }}" alt="">
+                            <div class="Project_card_text">
+                                <h4 class="mb-2">{{ project.Title }}</h4>
+                                {{ project.description|safe|truncatewords:15}}
+                            </div>
+                            <div class="Project_card_button">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal{{ project.id }}">
+                                    See More
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal{{ project.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">{{ project.Title }}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-    
-                                <div class="mb-4">
-                                    <img src="{{ project.picture }}" alt=""
-                                        style="width:100%;height: 250px;object-fit:cover;">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal{{ project.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">{{ project.Title }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                {{ project.description|safe}}
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <div class="modal-body">
+        
+                                    <div class="mb-4">
+                                        <img src="{{ project.picture }}" alt=""
+                                            style="width:100%;height: 250px;object-fit:cover;">
+                                    </div>
+                                    {{ project.description|safe}}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
-                {% else %}
-                <div class="d-flex justify-content-center">
-                    <div class="d-flex justify-content-center align-items-center"
-                        style="width: 80%; max-width: 500px; height: 250px; background-color: #1ab3edb3; color: white;">
-                        <h5>
-                            No Project Yet
-                        </h5>
+                    {% endfor %}
+                    {% else %}
+                    <div class="col-md d-flex justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-center align-items-center"
+                            style="width: 80%; max-width: 500px; height: 250px; background-color: #1ab3edb3; color: white;">
+                            <h5>
+                                No Project Yet
+                            </h5>
+                        </div>
                     </div>
+                    {% endif %}
                 </div>
-                {% endif %}
             </div>
         
+        
             <!-- for the Second Set -->
-            <div class="more_Project">
+            <div class="container more_Project">
                 {% if second_three_Project %}
                 <div class="row align-items-center mt-5">
                     {% for projectb in second_three_Project %}
@@ -247,9 +250,11 @@
                 </div>
                 {% endif %}
             </div>
-    
+        
             <!-- Show more buttons -->
-            <button id="show_more" class="btn btn-primary px-3 py-2 mt-4">Show more Projects</button>
+            <div class="d-flex justify-content-center">
+                <button id="show_more" class="btn btn-primary px-3 py-2 mt-4">Show more Projects</button>
+            </div>
         </div>
     </section>
 </div>

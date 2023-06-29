@@ -8,12 +8,14 @@ def Arms_view(request):
     Revival_Prayers=Arm.objects.get(Arm='Revival Prayers')
     Foundations=Arm.objects.get(Arm='Foundation')
     Women=Arm.objects.get(Arm='Women’s Hub')
+    Partners=Arm.objects.get(Arm='Partners')
     context={
         "arms":arms,
         "Bible_studies":Bible_studies,
         "Revival_Prayers":Revival_Prayers,
         "Foundations":Foundations,
-        "Women":Women
+        "Women":Women,
+        "Partners": Partners
     }
     return render(request,"Arms.html",context)
 
@@ -50,8 +52,8 @@ def Womens_view(request):
 # GEM Foundations
 def Foundation_view(request):
     Foundations=Arm.objects.get(Arm='Foundation')
-    first_three_Project = Project.objects.all()[:3]
-    second_three_Project= Project.objects.all()[3:6]
+    first_three_Project = Project.objects.order_by('S_N')[:3]
+    second_three_Project= Project.objects.order_by('S_N')[3:6]
     # Foundation_event=Event.objects.get(GEM_Arm='Foundation')
     context={
         "arm":Foundations,
@@ -60,3 +62,5 @@ def Foundation_view(request):
         # "Foundation_event":Foundation_event
     }
     return render(request,"Foundation.html",context)
+
+

@@ -4,6 +4,12 @@
 {% block title %}Gem Arms{% endblock %}
 
 {% block content %}
+<style>
+    .Arm_card{
+        height: auto;
+    }
+</style>
+
 <div id="Armcover">
     <div id="Armcovertext">
         <div id="Armcover-text">
@@ -24,17 +30,17 @@
                     <div class="rule_blue my-4"></div>
                     <div class="rule_ash my-4"></div>
                 </div>
-                <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
-                    organizations radiating the glory of God, and advancing the Kingdom of God, therefore making all
-                    things on
-                    earth like it is in heaven.
+                <p class="leading_text">Our mission is to reveal the glory of God’s Kingdom, equip people to excel in
+                    the glory of the Kingdom, and transform the world into a Kingdom domain.
+                    <br>
+                    Be a part of the GEM World by joining any of the missions below.
                 </p>
             </div>
 
             <div>
                 <div class="row align-items-center mt-3 g-3">
                     <div class="col-md-6 col-lg-4  d-flex justify-content-center">
-                        <div class="Project_card mx-2 Arm_card">
+                        <div class="Project_card mx-2 Arm_card" >
                             <img class="Project_card_img" src="{{ Bible_studies.picture }}" alt="">
                             <div class="Text_container d-flex flex-column justify-content-center align-items-center">
                                 <h4 class="p-2 pt-3">{{ Bible_studies.Arm }}</h4>
@@ -83,6 +89,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6 col-lg-4  d-flex justify-content-center">
+                        <div class="Project_card mx-2 Arm_card" >
+                            <img class="Project_card_img" src="{{ Partners.picture }}" alt="">
+                            <div class="Text_container d-flex flex-column justify-content-center align-items-center">
+                                <h4 class="p-2 pt-3">{{ Partners.Arm }}</h4>
+                                <div class="Project_card_button">
+                                    <a href="{% url 'Payment:initiate' %}" class="btn btn-primary">Read more</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

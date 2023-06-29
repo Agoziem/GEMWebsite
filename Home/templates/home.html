@@ -16,8 +16,8 @@
                         <div class="small_rectangle2"></div>
                     </span><br>
                 </div>
-                <p class="text4 p-0 text-center text-lg-start" data-aos="fade-up" data-aos-delay="300">Revealing the
-                    Kingdom, Equipping People, Transforming the World.</p>
+                <p class="text4 p-0 text-center text-lg-start" data-aos="fade-up" data-aos-delay="300"> Equipping
+                    People, Transforming the World.</p>
                 <div class="d-flex justify-content-center justify-content-lg-start" data-aos="fade-up"
                     data-aos-delay="400">
                     <a href="{% url 'Arms:arms' %}" class="btn btn-primary">Get started</a>
@@ -29,9 +29,9 @@
         <div class="col-lg  d-flex justify-content-center pt-4 pt-md-4 pt-lg-0">
             <div class="hero_image_container ">
                 <div class="d-flex justify-content-center" style="padding: 16px;">
-                    <img class="hero_image active" src="{% static 'images/Women_Flier.png' %}" alt="">
-                    <img class="hero_image" src="{% static 'images/Bible_Studies_Flier.png' %}" alt="">
-                    <img class="hero_image" src="{% static 'images/Prayer_flier.png' %}" alt="">
+                    <img class="hero_image active" src="{% static 'images/Bible_Studies_Flier.jpg' %}" alt="">
+                    <img class="hero_image" src="{% static 'images/Women_Flier.png' %}" alt="">
+                    <img class="hero_image" src="{% static 'images/Prayer_flier.jpg' %}" alt="">
                 </div>
                 <div class="d-flex mt-3 justify-content-center">
                     <div class="hero_image_carousal_btn left d-flex justify-content-center align-items-center">
@@ -56,7 +56,7 @@
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
         </div>
-        <h1 class="my-2 text-center">Welcome to GEM</h1>
+        <h1 class="my-2 text-center">Welcome to GEM World</h1>
         <p class="leading_text text-center">
             Here, anything is possible;
             Dreams come true, and you can
@@ -64,37 +64,41 @@
         </p>
         <div class="row align-items-center g-5 my-1 ">
             <div class="col-md d-flex justify-content-center">
-                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="about-card d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="300">
                     <img src="{% static 'images/GEM 2.svg' %}" alt="">
-                    <div class="about_heading">Who we are ?</div>
-                    <span class="fst-italic"
+                    <div class="about_heading mt-2">Who we are ?</div>
+                    <span class="fst-italic mb-2"
                         style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">An Extension of God’s
                         Kingdom </span>
-                    <div>We are an extension of God’s Kingdom, revealing the glory of God
-                        and advancing the Kingdom of God on earth just as it is in heaven.
+                    <div>We are an extension of God’s Kingdom, revealing, establishing, and advancing the glory of God
+                        on earth just as it is in heaven.
                     </div>
                 </div>
             </div>
             <div class="col-md d-flex justify-content-center">
-                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-card d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                     <img src="{% static 'images/Mission.svg' %}" alt="">
-                    <div class="about_heading">Mission</div>
-                    <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
-                        …Equipping People, Transforming the World. </span>
-                    <div>Our Mission is revealing the Kingdom of God in its fullness, equipping people to live the
-                        Kingdom life, and transforming the world into a Kingdom domain.
+                    <div class="about_heading mt-2">Mission</div>
+                    <span class="fst-italic mb-2"
+                        style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
+                        Equipping People, Transforming the World. </span>
+                    <div>Our mission is to reveal the glory of God’s Kingdom, equip people to excel in the glory of the
+                        Kingdom, and transform the world into a Kingdom domain.
                     </div>
                 </div>
             </div>
             <div class="col-md d-flex justify-content-center">
-                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-card d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
                     <img src="{% static 'images/Vision.svg' %}" alt="">
-                    <div class="about_heading">Vision
+                    <div class="about_heading mt-2">Vision
                     </div>
-                    <span class="fst-italic" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
-                        A World Dominated by GEMS </span>
-                    <div>Our vision is to see a world dominated by GEMS. GEMS are people, nations, and organizations
-                        revealing the glory of God and advancing the dominion of God in their sphere of influence.
+                    <span class="fst-italic mb-2"
+                        style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
+                        A World filled with the glory of God and influenced by GEMS
+                    </span>
+                    <div>Our vision is to see a world filled with the glory of God and influenced by GEMS; GEMS are
+                        people, nations, and organizations excelling in their true glory and advancing the glory of God
+                        in their sphere of influence.
                     </div>
                 </div>
             </div>
@@ -232,9 +236,10 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-    
+
                             <div class="mb-4">
-                                <img src="{{ project.picture }}" alt="" style="width:100%;height: 250px;object-fit:cover;">
+                                <img src="{{ project.picture }}" alt=""
+                                    style="width:100%;height: 250px;object-fit:cover;">
                             </div>
                             {{ project.description|safe}}
                         </div>
@@ -257,7 +262,7 @@
             {% endif %}
         </div>
     </div>
-    
+
 
     <!-- for the Second Set -->
     <div class="container more_Project">
@@ -358,7 +363,7 @@
                                 <p class="card-text">{{ event.description|truncatewords:20}}</p>
                                 <p class="card-text"><small class="text-muted">{{ event.Day }}
                                         {{ event.Month}}</small>&nbsp&nbsp<span class="fw-bold" style="color:#18ADE5">
-                                        <i class="fa-solid fa-clock h5 me-1"></i> {{ event.Time }}</span></p>
+                                        <i class="fa-solid fa-clock h5 me-1"></i> {{ event.Time }} ( Est Toronto )</span></p>
                             </div>
                         </div>
                     </div>
@@ -401,14 +406,22 @@
                     </div>
                     <div class="d-flex justify-content-center mt-0 mb-2">
                         <span>
+                            {% if Staff.facebook %}
                             <a class="me-2" href="{{ Staff.facebook }}" target="_blank"><i class="fa-brands fa-facebook"
                                     style="font-size: 22px;"></i></a>
+                            {% endif %}
+                            {% if Staff.instagram %}
                             <a class="me-2" href="{{ Staff.instagram }}" target="_blank"><i
                                     class="fa-brands fa-instagram" style="font-size: 22px;"></i></a>
+                            {% endif %}
+                            {% if Staff.whatsapp %}
                             <a class="me-2" href="{{ Staff.whatsapp }}" target="_blank"><i class="fa-brands fa-whatsapp"
                                     style="font-size: 22px;"></i></a>
+                            {% endif %}
+                            {% if Staff.twitter %}
                             <a class="" href="{{ Staff.twitter }}" target="_blank"><i class="fa-brands fa-twitter"
                                     style="font-size: 22px;"></i></a>
+                            {% endif %}
                         </span>
                     </div>
                 </div>
@@ -457,8 +470,8 @@
             <div class="rule_blue my-4"></div>
             <div class="rule_ash my-4"></div>
         </div>
-        <p class="leading_text">Our vision is to see a world dominated by GEMS. GEMS are people, nations and
-            organizations radiating the glory of God.
+        <p class="leading_text">Our mission is to reveal the glory of God’s Kingdom, equip people to excel in the glory
+            of the Kingdom, and transform the world into a Kingdom domain.
         </p>
         <div class="d-flex justify-content-center">
             <div class="Photogallery">
@@ -507,7 +520,11 @@
                             An error occurred while sending your message.
                         </div>
                     </div>
-
+                    <!-- GEM email -->
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-envelope h4 me-3"></i>
+                        <div>getequippedmission@gmail.com</div>
+                    </div>
                     <form id="contact-form" class="form" style="width: 280px;font-weight: 600; color: #052640;">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Name</label>
