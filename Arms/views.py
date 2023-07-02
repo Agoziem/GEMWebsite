@@ -5,7 +5,7 @@ from Home.models import *
 def Arms_view(request):
     arms=Arm.objects.order_by('-id')
     Bible_studies=Arm.objects.get(Arm="Bible Studies")
-    Revival_Prayers=Arm.objects.get(Arm='Revival Prayers')
+    Revival_Prayers=Arm.objects.get(Arm='Revival Prayer')
     Foundations=Arm.objects.get(Arm='Foundation')
     Women=Arm.objects.get(Arm='Women’s Hub')
     Partners=Arm.objects.get(Arm='Partners')
@@ -32,7 +32,7 @@ def Bible_Studies_view(request):
 # GEM Revival Prayers
 def Revival_Prayers_view(request):
     Revival_Prayers=Arm.objects.get(Arm='Revival Prayers')
-    Revival_Prayers_event=Event.objects.get(GEM_Arm='Revival Prayers')
+    Revival_Prayers_event=Event.objects.get(GEM_Arm='Revival Prayer')
     context={
         "arm":Revival_Prayers,
         "Revival_Prayers_event":Revival_Prayers_event,
