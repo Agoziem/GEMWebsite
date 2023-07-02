@@ -31,7 +31,7 @@ def Bible_Studies_view(request):
 
 # GEM Revival Prayers
 def Revival_Prayers_view(request):
-    Revival_Prayers=Arm.objects.get(Arm='Revival Prayers')
+    Revival_Prayers=Arm.objects.get(Arm='Revival Prayer')
     Revival_Prayers_event=Event.objects.get(GEM_Arm='Revival Prayer')
     context={
         "arm":Revival_Prayers,
