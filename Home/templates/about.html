@@ -8,7 +8,7 @@
            About GEM
         </div>
         <p class="px-2">
-            Equiping people, transforming the World
+            Equipping people, transforming the World
         </p>
     </div>
 </div>
@@ -34,8 +34,7 @@
                     <span class="fst-italic mb-2"
                         style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">An Extension of God’s
                         Kingdom </span>
-                    <div>We are an extension of God’s Kingdom, revealing, establishing, and advancing the glory of God
-                        on earth just as it is in heaven.
+                    <div>We are an extension of God’s Kingdom, advancing Kingdom excellence on earth just as it is in heaven.
                     </div>
                 </div>
             </div>
@@ -45,8 +44,7 @@
                     <div class="about_heading mt-2">Mission</div>
                     <span class="fst-italic mb-2" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
                         Equipping People, Transforming the World. </span>
-                    <div>Our mission is to reveal the glory of God’s Kingdom, equip people to excel in the glory of the
-                        Kingdom, and transform the world into a Kingdom domain.
+                    <div>Our mission is to equip people in excellence, and transform the world into a domain of excellence.
                     </div>
                 </div>
             </div>
@@ -58,9 +56,7 @@
                     <span class="fst-italic mb-2" style="font-family: 'EB Garamond', serif; font-weight:500;color: #010141">
                         A World filled with the glory of God and influenced by GEMS
                     </span>
-                    <div>Our vision is to see a world filled with the glory of God and influenced by GEMS; GEMS are
-                        people, nations, and organizations excelling in their true glory and advancing the glory of God
-                        in their sphere of influence.
+                    <div>Our vision is to see a world filled with excellence pioneered by GEMS; GEMS are people, nations, and organizations excelling in their true capacity, and multiplying excellence in their sphere of influence.
                     </div>
                 </div>
             </div>
@@ -115,14 +111,22 @@
                     </div>
                     <div class="d-flex justify-content-center mt-0 mb-2">
                         <span>
+                            {% if Staff.facebook %}
                             <a class="me-2" href="{{ Staff.facebook }}" target="_blank"><i class="fa-brands fa-facebook"
                                     style="font-size: 22px;"></i></a>
+                            {% endif %}
+                            {% if Staff.instagram %}
                             <a class="me-2" href="{{ Staff.instagram }}" target="_blank"><i
                                     class="fa-brands fa-instagram" style="font-size: 22px;"></i></a>
+                            {% endif %}
+                            {% if Staff.whatsapp %}
                             <a class="me-2" href="{{ Staff.whatsapp }}" target="_blank"><i class="fa-brands fa-whatsapp"
                                     style="font-size: 22px;"></i></a>
+                            {% endif %}
+                            {% if Staff.twitter %}
                             <a class="" href="{{ Staff.twitter }}" target="_blank"><i class="fa-brands fa-twitter"
                                     style="font-size: 22px;"></i></a>
+                            {% endif %}
                         </span>
                     </div>
                 </div>
