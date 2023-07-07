@@ -79,7 +79,7 @@ class Staff(models.Model):
 
 Arm_list=(
 	("Bible Studies","Bible Studies"),
-	("Revival Prayers","Revival Prayers"),
+	("Revival Prayer","Revival Prayer"),
 	("Foundation","Foundation"),
 	("Women’s Hub","Women’s Hub"),
 	("Partners","Partners")
