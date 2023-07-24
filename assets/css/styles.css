@@ -363,6 +363,7 @@ main {
     width: 357px;
     height: 435px;
     margin: 18px;
+    object-fit: cover;
   }
 
   .hero_image.active {
