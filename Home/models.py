@@ -16,6 +16,9 @@ class Value(models.Model):
 	Organization_name=models.ForeignKey(Organization_detail,related_name="values",on_delete=models.CASCADE,blank=False)
 	Value_heading=models.CharField(max_length=300,blank=False)
 	Value=models.CharField(max_length=300,blank=False)
+
+	class Meta:
+		ordering = ['S_N']
     
 	def __str__(self):
 	    return f"{self.Organization_name} Value - {self.Value_heading}"

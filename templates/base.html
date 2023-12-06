@@ -37,22 +37,23 @@
         var user = '{{request.user}}'
 
         function getToken(name) {
-            var cookieValue = null;
-            if (document.cookie && document.cookie !== '') {
-                var cookies = document.cookie.split(';');
-                for (var i = 0; i < cookies.length; i++) {
-                    var cookie = cookies[i].trim();
-                    // Does this cookie string begin with the name we want?
-                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
+                var cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = cookies[i].trim();
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
                     }
                 }
+                return cookieValue;
             }
-            return cookieValue;
-        }
         var csrftoken = getToken('csrftoken')
     </script>
+
 </head>
 
 <body class="position-relative d-flex flex-column min-vh-100">
@@ -116,8 +117,8 @@
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink"
                             style="border: 1px solid #18ADE5;">
                             <li><a class="dropdown-item" href="{% url 'Arms:arms' %}">Missions Page</a></li>
-                            <li><a class="dropdown-item" href="{% url 'Arms:Bible_Studies' %}">Bible Studies</a></li>
-                            <li><a class="dropdown-item" href="{% url 'Arms:Revival_Prayer' %}">Revival Prayer</a></li>
+                            <!-- <li><a class="dropdown-item" href="{% url 'Arms:Bible_Studies' %}">Bible Studies</a></li>
+                            <li><a class="dropdown-item" href="{% url 'Arms:Revival_Prayer' %}">Revival Prayer</a></li> -->
                             <li><a class="dropdown-item" href="{% url 'Arms:Foundations' %}">Foundation</a></li>
                             <li><a class="dropdown-item" href="{% url 'Arms:Womens_Hub' %}">Women</a></li>
                             <li><a class="dropdown-item" href="{% url 'Payment:initiate' %}">Partners</a></li>
@@ -127,9 +128,9 @@
                     <li class="nav-item me-2">
                         <a href="/#Project" class="nav-link">Testimonials</a>
                     </li>
-                    <li class="nav-item me-2">
+                    <!-- <li class="nav-item me-2">
                         <a href="/#Event" class="nav-link">Upcoming Events</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item me-2">
                         <a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
                     </li>
@@ -290,10 +291,10 @@
             <div class="col-5 col-md-2">
                 <h5>GEM MISSIONS</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="{% url 'Arms:Bible_Studies' %}" class="nav-link p-0">GEM Bible
+                    <!-- <li class="nav-item mb-2"><a href="{% url 'Arms:Bible_Studies' %}" class="nav-link p-0">GEM Bible
                             Studies</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'Arms:Revival_Prayer' %}" class="nav-link p-0">GEM Revival
-                            Prayer</a></li>
+                            Prayer</a></li> -->
                     <li class="nav-item mb-2"><a href="{% url 'Arms:Foundations' %}" class="nav-link p-0">GEM
                             Foundation</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'Arms:Womens_Hub' %}" class="nav-link p-0">GEM Women's
