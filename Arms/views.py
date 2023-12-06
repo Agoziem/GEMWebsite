@@ -4,15 +4,15 @@ from Home.models import *
 
 def Arms_view(request):
     arms=Arm.objects.order_by('-id')
-    Bible_studies=Arm.objects.get(Arm="Bible Studies")
-    Revival_Prayers=Arm.objects.get(Arm='Revival Prayer')
+    # Bible_studies=Arm.objects.get(Arm="Bible Studies")
+    # Revival_Prayers=Arm.objects.get(Arm='Revival Prayer')
     Foundations=Arm.objects.get(Arm='Foundation')
     Women=Arm.objects.get(Arm='Women’s Hub')
     Partners=Arm.objects.get(Arm='Partners')
     context={
         "arms":arms,
-        "Bible_studies":Bible_studies,
-        "Revival_Prayers":Revival_Prayers,
+        # "Bible_studies":Bible_studies,
+        # "Revival_Prayers":Revival_Prayers,
         "Foundations":Foundations,
         "Women":Women,
         "Partners": Partners
